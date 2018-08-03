@@ -1,0 +1,517 @@
+<!-- Last updated - Tony Waddington, 7/3/17 14.00 -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Using the correct tools</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript,
+        if it's not present, don't show loader */
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999999999999999;
+            background: url(img/Preloader_3.gif) center no-repeat #fff;
+        }
+
+        
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/HOR303-tools.css" rel="stylesheet">
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+
+
+<script>
+    
+    var steps = ['Secateurs', 'shears', 'pruning-saw', 'pole', 'loppers'];
+    var stepIndex = 0;
+
+    $(document).ready(function () {
+
+        // initialise
+        $('svg-container').css('background-color', 'rgba(234,94,101,0.5)');
+        $("#complete-page").hide();
+        $(".overlay").hide();
+        var notifyIconMaxSize = 200; //Size of the Blinking icon on answer dropped.
+
+        $(".drop, .question").each(function () {
+            $(this).hide();
+        });
+
+        $('#Secateurs-drop').show();
+        $('#0-question').show();
+
+        $('.hidden').hide();
+        $('.nextbtn').hide();
+
+        $('.modalLink').click(function () {
+            $('.instruction').removeClass('activeH3');
+            $('.information').addClass('activeH3');
+        });
+
+        $('.closeModal').click(function () {
+            $('.information').removeClass('activeH3');
+            $('.instruction').addClass('activeH3');
+        });
+
+        $('.nextbtn').click(function () {
+            $('.svg-container').removeAttr('style');
+            $( ".answer" ).css('cursor','pointer');
+
+            $(".drop, .question").each(function () {
+                $(this).hide();
+            });
+
+            $('#' + steps[stepIndex] + '-drop').show();
+            $('#' + stepIndex + '-question').show();
+
+            $('.nextbtn').hide();
+
+            if (stepIndex === steps.length) {
+                $("#complete-page").fadeIn(500);
+                $("#question-page-page").fadeOut(500);
+            }
+            $(".answer").show();
+            $( ".answer" ).draggable( "enable" );
+            $( ".answer" ).addClass( 'hvr-grow' );
+            $(".overlay").hide();
+                    
+        });
+
+        $('.restart-button').click(function () {
+            $(".drop, .question").each(function () {
+                $(this).hide();
+            });
+
+            $('#Secateurs-drop').show();
+            $('#0-question').show();
+            $("#question-page-page").fadeIn(500);
+
+            $("#complete-page").fadeOut(500);
+
+            stepIndex = 0;
+        });
+
+
+        $(".menu .answer").draggable({
+            snap: '.ui-droppable',
+            scroll: false,
+            snapMode: 'inner',
+            revert: function (drop) {
+                if (!drop) {
+                    return true;
+                }
+
+                var drop_p = drop.offset();
+
+                if ($.trim($(this).text()).toLowerCase() === $.trim(drop.text()).toLowerCase()) {
+
+                    $('.nextbtn').show();
+                    stepIndex = stepIndex + 1;
+                    $( ".answer" ).draggable( "disable" );
+                    $( ".answer" ).css('cursor','default');
+                    $( ".answer" ).removeClass( 'hvr-grow' );
+                    drop.removeClass('allowed');
+                    drop.addClass('answered');
+                    $(this).addClass('answered');
+                    $(this).hide();
+                    $(".overlay").show();
+                    $('.svg-container').css('background-color', 'rgba(91,196,191,0.7)');
+
+                    $('#answered-correctly').css({
+                        opacity: 0,
+                        'font-size': 0,
+                        left: drop_p.left + drop.innerWidth() / 2 + 30,
+                        top: drop_p.top + drop.innerHeight() / 2
+                    }).show().animate({
+                        opacity: 1,
+                        'font-size': '+=' + notifyIconMaxSize + 'px',
+                        left: drop_p.left + drop.innerWidth() / 2 + 30 - notifyIconMaxSize / 2,
+                        top: drop_p.top + drop.innerHeight() / 2 - notifyIconMaxSize / 2
+                    }, 500, function () {
+                        $('#answered-correctly').animate({
+                            opacity: 0,
+                            'font-size': '-=' + notifyIconMaxSize + 'px',
+                            left: drop_p.left + drop.innerWidth() / 2 + 30,
+                            top: drop_p.top + drop.innerHeight() / 2
+                        }, 500, function () {
+                            $('#answered-correctly').removeAttr('style');
+                            $('#answered-correctly').hide();
+
+                            $(".svg-container .drop.answered").addClass('allowed');
+                            $(".svg-container .drop.answered").removeClass('answered');
+                            $(".menu .answer").removeClass('answered');
+                        });
+                    });
+
+                }
+                else {
+
+                    $('.nextbtn').hide();
+                    
+                    $('.svg-container').css('background-color', 'rgba(234,94,101,0.7)');
+                    $('#answered-wrongly').css({
+                        opacity: 0,
+                        'font-size': 0,
+                        left: drop_p.left + drop.innerWidth() / 2 + 30,
+                        top: drop_p.top + drop.innerHeight() / 2
+                    }).show().animate({
+                        opacity: 1,
+                        'font-size': '+=' + notifyIconMaxSize + 'px',
+                        left: drop_p.left + drop.innerWidth() / 2 + 30 - notifyIconMaxSize / 2,
+                        top: drop_p.top + drop.innerHeight() / 2 - notifyIconMaxSize / 2
+                    }, 500, function () {
+                        $('#answered-wrongly').animate({
+                            opacity: 0,
+                            'font-size': '-=' + notifyIconMaxSize + 'px',
+                            left: drop_p.left + drop.innerWidth() / 2 + 30,
+                            top: drop_p.top + drop.innerHeight() / 2
+                        }, 500, function () {
+                            $('#answered-wrongly').removeAttr('style');
+                            $('#answered-wrongly').hide();
+
+                            $('.svg-container').removeAttr('style');
+                        });
+                    });
+
+
+                }
+                $(this).delay(600);
+
+                return true;
+            }
+
+        });
+
+        $(".svg-container .drop.allowed").droppable({
+            accept: ".menu .answer",
+            hoverClass: 'drop-hover',
+            classes: {
+                "ui-droppable-hover": "ui-state-hover"
+            },
+            drop: function (event, ui) {
+                var drop_p = $(this).offset();
+                var drag_p = ui.draggable.offset();
+                var left_end = drop_p.left - drag_p.left;
+                var top_end = drop_p.top - drag_p.top;
+                ui.draggable.animate({
+
+                });
+                return false;
+            }
+        });
+
+        $('.restart-button').click(function () {
+            $(".svg-container .drop.answered").addClass('allowed');
+            $(".svg-container .drop.answered").removeClass('answered');
+            $(".menu .answer").removeClass('answered');
+            $("#complete-page").fadeOut(400);
+            $("#question-page").fadeIn(400);
+
+            $('.container').removeClass("pulse");
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="question-page">
+        <!-- Draggable answers -->
+        <div class="header">
+            <h3 class="instruction activeH3">Drag and drop the correct tool on to the plant</h3>
+            <h3 class="information">Information</h3>
+        </div>
+        <div class="menu">
+            <h1 id="0-question" class="question">Q1/5. A rose bush that needs dead flower heads removed</h1>
+            <h1 id="1-question" class="question">Q2/5. A hedge in need of an even appearance</h1>
+            <h1 id="2-question" class="question">Q3/5. A small apple tree with branches 3cm in diameter</h1>
+            <h1 id="3-question" class="question">Q4/5. A tall apple tree with 3 cm branches</h1>
+            <h1 id="4-question" class="question">Q5/5. A thorny shrub with 3cm branches</h1>
+
+            <div class="answer-container">
+                <a id="pruningModal" href="#Modal1" class="modalLink"><p>Pruning saw <i class="fa fa-info-circle" aria-hidden="true"></i></p></a>
+                <div class="answer hvr-grow" id="pruning-answer"><p>Pruning saw</p><a class="hide">Next</a></div>
+            </div>
+            <div class="answer-container">
+                <a id="secateursModal" href="#Modal2" class="modalLink"><p>Secateurs <i class="fa fa-info-circle" aria-hidden="true"></i></p></a>
+                <div class="answer hvr-grow" id="secateurs-answer"><p>Secateurs</p><a class="hide">Next</a></div>
+            </div>
+            <div class="answer-container">
+                <a id="loppersModal" href="#Modal3" class="modalLink"><p>Loppers <i class="fa fa-info-circle" aria-hidden="true"></i></p></a>
+                <div class="answer hvr-grow" id="loppers-answer"><p>Loppers</p><a class="hide">Next</a></div>
+            </div>
+            <div class="answer-container">
+                <a id="poleModal" href="#Modal4" class="modalLink"><p>Pole pruner <i class="fa fa-info-circle" aria-hidden="true"></i></p></a>
+                <div class="answer hvr-grow" id="pole-answer"><p>Pole pruner</p><a class="hide">Next</a></div>
+            </div>
+            <div class="answer-container">
+                <a id="shearsModal" href="#Modal5" class="modalLink"><p>Shears <i class="fa fa-info-circle" aria-hidden="true"></i></p></a>
+                <div class="answer hvr-grow" id="shears-answer"><p>Shears</p><a class="hide">Next</a></div>
+            </div>
+        </div>
+
+
+
+        <!-- DROP AREA-->
+
+        <div class="wrapper">
+            <div class="svg-container">
+                <div class="drop allowed" id="Secateurs-drop"><p>Secateurs</p><div class="overlay overlay-secateurs"></div><a class="btn nextbtn">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                <div class="drop allowed" id="shears-drop"><p>Shears</p><div class="overlay overlay-shears"></div><a class="btn nextbtn">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                <div class="drop allowed" id="pruning-saw-drop"><p>Pruning saw</p><div class="overlay overlay-pruning"></div><a class="btn nextbtn">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                <div class="drop allowed" id="pole-drop"><p>Pole pruner</p><div class="overlay overlay-pole"></div><a class="btn nextbtn">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                <div class="drop allowed" id="loppers-drop"><p>Loppers</p><div class="overlay overlay-loppers"></div><a class="btn nextbtn">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+
+                <a class="btn nextbtn">Next</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page to appear when completed -->
+    <div id="complete-page">
+        <div class="container">
+
+            <h2>Well done! <i class="fa fa-check-circle-o" aria-hidden="true"></i></h2>
+
+            <div class="conclusionBox" id="conclusion1">
+                <div class="conclusionInfo" id="conclusion1-info">
+                    <h3>Pruning saw</h3>
+                    <p>Generally used on small branches or those bigger than 2.5 cm.</p>
+                </div>
+            </div>
+
+            <div class="conclusionBox" id="conclusion2">
+                <div class="conclusionInfo" id="conclusion2-info">
+                    <h3>Secateurs</h3>
+                    <p>Used for cutting small branches up to 1 cm and buds or soft stems.</p>
+                </div>
+            </div>
+
+            <div class="conclusionBox" id="conclusion3">
+                <div class="conclusionInfo" id="conclusion3-info">
+                    <h3>Loppers</h3>
+                    <p>Used on branches 1 cm to 4cm thick.</p>
+                </div>
+            </div>
+
+            <div class="conclusionBox" id="conclusion4">
+                <div class="conclusionInfo" id="conclusion4-info">
+                    <h3>Pole pruner</h3>
+                    <p>Good for cutting high branches, and used on branches 2 to 3 cm thick.</p>
+                </div>
+            </div>
+
+            <div class="conclusionBox" id="conclusion5">
+                <div class="conclusionInfo" id="conclusion5-info">
+                    <h3>Shears</h3>
+                    <p>Cuts back shoots and tips, and creates an even appearance across a large area.</p>
+                </div>
+            </div>
+            <a class="btn restart-button">Play again <i class="fa fa-undo" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <div>
+        <div id="answered-correctly" class="hidden">
+            <span><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+        </div>
+        <div id="answered-wrongly" class="hidden">
+            <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </div>
+    </div>
+
+    <!--MODALS-->
+    <!-- Pruning saw-->
+    <div id="Modal1">
+
+        <div class="modal-content">
+            <!--Your modal content goes here-->
+            <div class="modal-containter">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+
+                <h1>Pruning saw</h1>
+                <img src="img/pruningSaw-closeUp.png" alt="secateurs close up" class="closeUp">
+                <img src="img/pruningSaw.svg" alt="pruning-saw">
+                <p>There are many different types of pruning saw.</p>
+                <p>Easier to use than most other pruning tools.</p>
+                <p>Very sharp teeth.</p>
+                <p>Generally used on small branches or those bigger than 2.5 cm.</p>
+
+                <div id="btn-close-modal" class="close-Modal1 closeModal">
+                    Close <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Secateurs -->
+    <div id="Modal2">
+
+        <div class="modal-content">
+            <!--Your modal content goes here-->
+            <div class="modal-containter">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+
+                <h1>Secateurs</h1>
+
+                <img src="img/secateur-closeUp.png" alt="secateurs close up" class="closeUp">
+                <img src="img/secateurs.svg" alt="secateurs">
+                <p>Used for cutting small branches up to 1 cm and buds or soft stems.</p>
+                <p>Cause little damage to plant if well maintained.</p>
+                <p>Two types, anvil and parrot-beaked.</p>
+                <p>Used with cutting blade at top of cut.</p>
+
+                <div id="btn-close-modal" class="close-Modal2 closeModal">
+                    Close <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Loppers -->
+    <div id="Modal3">
+
+        <div class="modal-content">
+            <!--Your modal content goes here-->
+            <div class="modal-containter">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+
+                <h1>Loppers</h1>
+                <img src="img/loppers-closeUp.png" alt="secateurs close up" class="closeUp">
+                <img src="img/loppers.svg" alt="loppers">
+                <p>Two types, anvil and parrot-beaked.</p>
+                <p>Parrot-beak tend to make a cleaner cut.</p>
+                <p>Long handles increase leverage.</p>
+                <p>Used on branches 1 cm to 4cm thick.</p>
+
+                <div id="btn-close-modal" class="close-Modal3 closeModal">
+                    Close <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Pole pruner -->
+    <div id="Modal4">
+
+        <div class="modal-content">
+            <!--Your modal content goes here-->
+            <div class="modal-containter">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+
+                <h1>Pole pruner</h1>
+                <img src="img/polePruner-closeUp.png" alt="secateurs close up" class="closeUp">
+                <img src="img/pole-pruner.svg" alt="pole pruner">
+                <p>Good for cutting high branches.</p>
+                <p>Use a rope to operate the blade.</p>
+                <p>Good for cutting horizontal branches.</p>
+                <p>Used on branches 2 to 3 cm thick.</p>
+
+                <div id="btn-close-modal" class="close-Modal4 closeModal">
+                    Close <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Shears -->
+    <div id="Modal5">
+
+        <div class="modal-content">
+            <!--Your modal content goes here-->
+            <div class="modal-containter">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+
+                <h1>Shears</h1>
+                <img src="img/shears-closeUp.png" alt="secateurs close up" class="closeUp">
+                <img src="img/shears.svg" alt="shears">
+                <p>Cuts back shoots and tips.</p>
+                <p>Not selective on what is cut.</p>
+                <p>Creates an even appearance across a large area.</p>
+
+                <div id="btn-close-modal" class="close-Modal5 closeModal">
+                    Close <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  Modal scripts  -->
+    <script type="text/javascript" src="js/animatedModal.js"></script>
+    <script>
+        $("#pruningModal").animatedModal({
+            modalTarget: 'Modal1',
+        });
+        $("#secateursModal").animatedModal({
+            modalTarget: 'Modal2',
+        });
+        $("#loppersModal").animatedModal({
+            modalTarget: 'Modal3',
+        });
+        $("#poleModal").animatedModal({
+            modalTarget: 'Modal4',
+        });
+        $("#shearsModal").animatedModal({
+            modalTarget: 'Modal5',
+        });
+    </script>
+
+    <!-- Google Analytic -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-85015012-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

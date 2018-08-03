@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matahi project personas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* PRELOADER CSS */
+
+        /* Paste this css to your style sheet file or under head tag */
+
+        /* This only works with JavaScript, 
+        if it's not present, don't show loader */
+
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(img/Preloader_3.gif) center no-repeat #fff;
+        }
+    </style>
+
+    <!-- FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <!-- CORE STYLE -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav>
+        <div class="nav-item nav-item-1 active" data-tab="1">
+            <img src="img/nav-icon-1.svg">
+            <p>Henare Jones</p>
+        </div>
+        <div class="nav-item nav-item-2" data-tab="2">
+            <img src="img/nav-icon-2.svg">
+            <p>Alice Foo</p>
+        </div>
+        <div class="nav-item nav-item-3" data-tab="3">
+            <img src="img/nav-icon-3.svg">
+            <p>Maurice Piwari</p>
+        </div>
+    </nav>
+    
+    <div class="menu-btn">
+        <p>Menu <i class="fas fa-bars"></i></p>
+        <p>Close <i class="fas fa-times"></i></p>
+    </div>
+
+    <div class="image-container">
+        <div class="image image-1 active"></div>
+        <div class="image image-2"></div>
+        <div class="image image-3"></div>
+    </div>
+<div class="wrapper">
+    <!-- info 1-->
+    <div class="info info-1 active">
+        <h1>Henare Jones</h1>
+        <h1 class="description">Older hobby genealogist</h1>
+
+        <div class="info-item">
+            <h2>Personal</h2>
+            <div class="column">
+                <div>
+                    <img src="img/male.svg">
+                    <p><strong>Gender</strong><br>Male</p>
+                </div>
+
+                <div>
+                    <img src="img/age.svg">
+                    <p><strong>Age</strong><br>67</p>
+                </div>
+
+                <div>
+                    <img src="img/education.svg">
+                    <p><strong>Education</strong><br>Bursary</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <h2>Professional</h2>
+
+<!--BAR CHARTS
+    I have written some JS to set the values of the bar charts. Use the data attributes to change the values. 'data-lines' sets how many dividing lines are on the chart (set as many or few as you like). 'data-bar' sets the size of the green bar on the chart. This is using the css transform property: scaleX(val). So the value needs to be between 0-1.
+-->
+            <p><strong>Web experience</strong></p>
+            <div class="barWrapper">
+                <div class="barChart" data-bar="0.15" data-lines="3">
+                    <div class="bar"></div>
+                </div>
+                <div class="barTags">
+                    <p>Low</p>
+                    <p>Med</p>
+                    <p>High</p>
+                </div>
+            </div>
+
+            <p><strong>Web usage</strong></p>
+            <div class="barWrapper">
+                <div class="barChart" data-bar="0.5" data-lines="5">
+                    <div class="bar" style="margin-left: 25%;"></div>
+                </div>
+                <div class="barTags">
+                    <p>12am</p>
+                    <p>6am</p>
+                    <p>12pm</p>
+                    <p>6pm</p>
+                    <p>12am</p>
+                </div>
+            </div>
+
+            <div class="barWrapper">
+                <div class="barChart" data-bar="0.6666" data-lines="7">
+                    <div class="bar"></div>
+                </div>
+                <div class="barTags">
+                    <p>M</p>
+                    <p>T</p>
+                    <p>W</p>
+                    <p>T</p>
+                    <p>F</p>
+                    <p>S</p>
+                    <p>S</p>
+                </div>
+            </div>
+
+
+            <p>He doesn’t have much experience using the web. He’s come to the site because he enjoys researching genealogical information and wants to find photos relating to family histories that he’s writing. He’s also interested in contributing photos to the society. He found out about the society from a flyer at the local mall. He visits the Alexander Turnbull library in Wellington to find photos. He’s usually accessing the web during the day from home.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>Technical</h2>
+            <div class="column">
+                <div>
+                    <img src="img/laptop.svg">
+                    <p><strong>Device</strong><br>Laptop</p>
+                </div>
+                <div>
+                    <img src="img/windows.svg">
+                    <p><strong>OS</strong><br>Windows</p>
+                </div>
+                <div>
+                    <img src="img/ie.svg">
+                    <p><strong>Browser</strong><br>Explorer</p>
+                </div>
+            </div>
+
+            <p>He mostly uses his laptop for accessing the web. It runs Windows 7 and he uses Internet Explorer. He spends a couple of hours a day browsing the web.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>User motivation</h2>
+
+            <div class="column">
+                <div>
+                    <p><strong>Typing skills</strong></p>
+                    <div class="barWrapper">
+                        <div class="barChart" data-bar="0.25" data-lines="3">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="barTags">
+                            <p>Low</p>
+                            <p>High</p>
+                        </div>
+                    </div>
+
+                    <p><strong>Computer literacy</strong></p>
+                    <div class="barWrapper">
+                        <div class="barChart" data-bar="0.15" data-lines="3">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="barTags">
+                            <p>Low</p>
+                            <p>High</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <img src="img/eye.svg">
+                    <p><strong>Accessibility</strong><br>Short sighted</p>
+                </div>
+            </div>
+
+
+
+            <p>Motivated by curiosity. He’s looking to learn more about the web in general, but also to find materials for his studies. He wants to find and donate photos. He has some problems with long-sightedness and isn’t a fast typist. He isn’t a confident computer user and has some vision impairment. He has some concerns about giving his personal details to a web application.</p>
+        </div>
+    </div>
+
+
+    <!-- info 2-->
+    <div class="info info-2">
+        <h1>Alice Foo</h1>
+        <h1 class="description">High school researcher</h1>
+
+        <div class="info-item">
+            <h2>Personal</h2>
+            <div class="column">
+                <div>
+                    <img src="img/female.svg">
+                    <p><strong>Gender</strong><br>Female</p>
+                </div>
+
+                <div>
+                    <img src="img/age.svg">
+                    <p><strong>Age</strong><br>16</p>
+                </div>
+
+                <div>
+                    <img src="img/education.svg">
+                    <p><strong>Education</strong><br>Student</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <h2>Professional</h2>
+
+            <p><strong>Web experience</strong></p>
+            <div class="barWrapper">
+                <div class="barChart" data-bar="0.95" data-lines="3">
+                    <div class="bar"></div>
+                </div>
+                <div class="barTags">
+                    <p>Low</p>
+                    <p>Med</p>
+                    <p>High</p>
+                </div>
+            </div>
+
+            <p><strong>Web usage</strong></p>
+            <div class="barWrapper">
+                <div class="barChart" data-bar="0.6" data-lines="5">
+                    <div class="bar" style="margin-left: 33%;"></div>
+                </div>
+                <div class="barTags">
+                    <p>12am</p>
+                    <p>6am</p>
+                    <p>12pm</p>
+                    <p>6pm</p>
+                    <p>12am</p>
+                </div>
+            </div>
+
+            <div class="barWrapper">
+                <div class="barChart" data-bar="1" data-lines="7">
+                    <div class="bar"></div>
+                </div>
+                <div class="barTags">
+                    <p>M</p>
+                    <p>T</p>
+                    <p>W</p>
+                    <p>T</p>
+                    <p>F</p>
+                    <p>S</p>
+                    <p>S</p>
+                </div>
+            </div>
+
+            <p>Very experienced with using the web. She’s come to the site looking for material for a school project. She’s unlikely to be contributing photos to the society. She found out about the society from her teacher who gave her the link. She usually accesses the site from school during the day and from home on the weekend.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>Technical</h2>
+            <div class="column">
+                <div>
+                    <img src="img/ipad.svg">
+                    <p><strong>Device</strong><br>iPad</p>
+                </div>
+                <div>
+                    <img src="img/apple.svg">
+                    <p><strong>OS</strong><br>Apple</p>
+                </div>
+                <div>
+                    <img src="img/safari.svg">
+                    <p><strong>Browser</strong><br>Safari</p>
+                </div>
+            </div>
+
+            <p>She mostly uses her iPad for accessing the web. She uses Safari. She spends several hours a day browsing the web.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>User motivation</h2>
+
+            <div class="column">
+                <div>
+                    <p><strong>Typing skills</strong></p>
+                    <div class="barWrapper">
+                        <div class="barChart" data-bar="0.95" data-lines="3">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="barTags">
+                            <p>Low</p>
+                            <p>High</p>
+                        </div>
+                    </div>
+
+                    <p><strong>Computer literacy</strong></p>
+                    <div class="barWrapper">
+                        <div class="barChart" data-bar="0.85" data-lines="3">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="barTags">
+                            <p>Low</p>
+                            <p>High</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <img src="img/eye.svg">
+                    <p><strong>Accessibility</strong><br>No issues</p>
+                </div>
+            </div>
+
+            <p>Motivated by the need to complete her project. She’s focused on finding useful photos that meet the requirements of her project. She has no accessibility issues and is an excellent typist.</p>
+        </div>
+    </div>
+
+    <!-- info 3-->
+    <div class="info info-3">
+        <h1>Maurice Piwari</h1>
+        <h1 class="description">Belongs to local hapu</h1>
+
+        <div class="info-item">
+            <h2>Personal</h2>
+            <div class="column">
+                <div>
+                    <img src="img/male.svg">
+                    <p><strong>Gender</strong><br>Male</p>
+                </div>
+
+                <div>
+                    <img src="img/age.svg">
+                    <p><strong>Age</strong><br>32</p>
+                </div>
+
+                <div>
+                    <img src="img/education.svg">
+                    <p><strong>Education</strong><br>Teacher</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <h2>Professional</h2>
+
+            <p><strong>Web experience</strong></p>
+            <div class="barWrapper">
+                <div class="barChart" data-bar="0.80" data-lines="3">
+                    <div class="bar"></div>
+                </div>
+                <div class="barTags">
+                    <p>Low</p>
+                    <p>Med</p>
+                    <p>High</p>
+                </div>
+            </div>
+
+            <p><strong>Web usage</strong></p>
+            <div class="barWrapper">
+                <div class="barChart" data-bar="0.25" data-lines="5">
+                    <div class="bar" style="margin-left: 75%;"></div>
+                </div>
+                <div class="barTags">
+                    <p>12am</p>
+                    <p>6am</p>
+                    <p>12pm</p>
+                    <p>6pm</p>
+                    <p>12am</p>
+                </div>
+            </div>
+
+            <div class="barWrapper">
+                <div class="barChart" data-bar="1" data-lines="7">
+                    <div class="bar"></div>
+                </div>
+                <div class="barTags">
+                    <p>M</p>
+                    <p>T</p>
+                    <p>W</p>
+                    <p>T</p>
+                    <p>F</p>
+                    <p>S</p>
+                    <p>S</p>
+                </div>
+            </div>
+
+            <p>Maurice is a high school teacher at the local Kura Kaupapa, and belongs to the the local hapu. He uses technology everyday as part of his job. He’s mostly accessing the site during weeknights and weekends. He is a te reo Māori teacher.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>Technical</h2>
+            <div class="column">
+                <div>
+                    <img src="img/laptop.svg">
+                    <p><strong>Device</strong><br>Laptop</p>
+                </div>
+                <div>
+                    <img src="img/windows.svg">
+                    <p><strong>OS</strong><br>Windows</p>
+                </div>
+                <div>
+                    <img src="img/firefox.svg">
+                    <p><strong>Browser</strong><br>Firefox</p>
+                </div>
+            </div>
+
+            <p>He mostly uses his laptop for accessing the web. He uses Firefox. He doesn’t spend much time browsing the web, but does use his laptop several hours a day for work.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>User motivation</h2>
+
+            <div class="column">
+                <div>
+                    <p><strong>Typing skills</strong></p>
+                    <div class="barWrapper">
+                        <div class="barChart" data-bar="0.95" data-lines="3">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="barTags">
+                            <p>Low</p>
+                            <p>High</p>
+                        </div>
+                    </div>
+
+                    <p><strong>Computer literacy</strong></p>
+                    <div class="barWrapper">
+                        <div class="barChart" data-bar="0.75" data-lines="3">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="barTags">
+                            <p>Low</p>
+                            <p>High</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <img src="img/eye.svg">
+                    <p><strong>Accessibility</strong><br>Red-green colour blind</p>
+                </div>
+            </div>
+
+            <p>The local Kaumātua asked him if he could help with the project as a liaison person between the society and the Marae. He’s motivated by a desire to preserve local knowledge and make it available to hapu who’ve moved away from the area. He is red-green colour blind but has no other accessibility issues and is an excellent typist.</p>
+        </div>
+    </div>
+    
+</div>
+
+
+
+    <!--JQUERY and MODERNIZR-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script src="js/personas.js"></script>
+
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+    </script>
+
+</body>
+
+</html>

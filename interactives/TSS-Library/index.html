@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>What's in the library?</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(img/Preloader_3.gif) center no-repeat #fff;
+}
+</style>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/library.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.accordion.js"></script>
+        <script>
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
+ 
+    </head>
+    <body>
+        <div class="se-pre-con"></div>
+        
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="title">What's in the library?
+            
+        </div>
+        
+        <div class="dictionary"><a id="dictionary" href="#Modal1" class="hvr-grow-rotate"><img src="img/dictionary.svg" /></a></div>
+        <div class="news"><a id="newspaper" href="#Modal2" class="hvr-grow-rotate"><img src="img/newspaper.svg" /></a></div>
+        <div class="ebooks"><a id="ebooks" href="#Modal3" class="hvr-grow-rotate"><img src="img/e-book.svg" /></a></div>
+        <div class="encyclopedia"><a id="encyclopedia" href="#Modal4" class="hvr-grow-rotate"><img src="img/encyclopedia.svg" /></a></div>
+        <div class="books"><a id="books" href="#Modal5" class="hvr-grow-rotate"><img src="img/book.svg" /></a></div>
+        <div class="magazine"><a id="magazine" href="#Modal6" class="hvr-grow-rotate"><img src="img/magazine.svg" /></a></div>
+        <div class="journal"><a id="journal" href="#Modal7" class="hvr-grow-rotate"><img src="img/journal.svg" /></a></div>
+
+        <!-- accordian -->
+        <div class="accordiancontainer">
+            <div class="accordion" id="section1">Dictionary<span></span></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="acc-title">Information type:</div>
+                        <p>Provides definitions of words. Like encyclopedias, they can either be general or topic-specific.</p>
+                        <div class="acc-title">Useful for:</div>
+                        <p>Defining key terms for research.</p>
+                        <div class="acc-title">Advantages:</div>
+                        <p>Useful for clarifying your understanding of key terms.</p>
+                        <div class="acc-title">Disadvantages:</div>
+                        <p>Do not give details or explanations about ideas.</p>
+                    </div>
+                </div>
+            <div class="accordion" id="section2">Newspaper<span></span></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="acc-title">Information type:</div>
+                        <p>A collection of articles about current events, usually published daily.</p>
+                        <div class="acc-title">Useful for:</div>
+                        <p>Finding current information about international, national and local events / Finding editorials, commentaries, expert or popular opinions.</p>
+                        <div class="acc-title">Advantages:</div>
+                        <p>Up-to-date information.</p>
+                        <div class="acc-title">Disadvantages:</div>
+                        <p>Quickly becomes dated.</p>
+                    </div>
+                </div>
+            <div class="accordion" id="section3">E-books<span></span></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="acc-title">Information type:</div>
+                        <p>A book-length publication in electronic form.</p>
+                        <div class="acc-title">Useful for:</div>
+                        <p>Finding information to put your topic in context / Finding historical information or summaries on a topic.</p>
+                        <div class="acc-title">Advantages:</div>
+                        <p>Easy to access and find information within the e-book. / Ability to select, copy, highlight and annotate text / Easier to update than printed books.</p>
+                        <div class="acc-title">Disadvantages:</div>
+                        <p>Needs to be read on an electronic device / Some self-publishing means e-books aren’t always as rigorously checked as printed books.</p>
+                    </div>
+                </div>
+            <div class="accordion" id="section4">Encyclopedia<span></span></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="acc-title">Information type:</div>
+                        <p>Collections of short, factual entries, either general or topic-specific.</p>
+                        <div class="acc-title">Useful for:<span></div>
+                        <p>Finding background information on a topic / Finding key ideas, important dates or concepts.</p>
+                        <div class="acc-title">Advantages:</div>
+                        <p>Provide background information as a useful starting place for further research.</p>
+                        <div class="acc-title">Disadvantages:</div>
+                        <p>Can become outdated.</p>
+                        <p><strong>Note:</strong> Wikipedia is an internet encyclopaedia, to which anyone can add information. There’s no guarantee information is accurate, but it can be a good starting place to gain an overview of a topic.</p>
+                    </div>
+                </div>
+            <div class="accordion" id="section5">Books<span></span></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="acc-title">Information type:</div>
+                        <p>Books cover virtually any topic. For research purposes, you’ll probably be looking for books drawing together the information on your topic.</p>
+                        <div class="acc-title">Useful for:</div>
+                        <p>Finding information to put your topic in context / Finding historical information or summaries on a topic.</p>
+                        <div class="acc-title">Advantages:</div>
+                        <p>Accurate and credible information that has been edited.</p>
+                        <div class="acc-title">Disadvantages:</div>
+                        <p>Information can become dated, as books are difficult to update.</p>
+                    </div>
+                </div>
+            <div class="accordion" id="section6">Magazine<span></span></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="acc-title">Information type:</div>
+                        <p>A collection of articles and images on topics of popular interest.</p>
+                        <div class="acc-title">Useful for:</div>
+                        <p>Finding information or opinions about popular culture.</p>
+                        <div class="acc-title">Advantages:</div>
+                        <p>Timely information about current events.</p>
+                        <div class="acc-title">Disadvantages:</div>
+                        <p>Information can become dated / Written for a general audience.</p>
+                    </div>
+                </div>
+            <div class="accordion" id="section7">Journal<span></span></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="acc-title">Information type:</div>
+                        <p>A collection of articles written by experts, usually reviewed to ensure they are of high quality. Articles cover very specific topics.</p>
+                        <div class="acc-title">Useful for:</div>
+                        <p>Conducting scholarly research.</p>
+                        <div class="acc-title">Advantages:</div>
+                        <p>Credible and detailed information about specific topics.</p>
+                        <div class="acc-title">Disadvantages:</div>
+                        <p>Information can become dated / Not easily accessible.</p>
+                    </div>
+                </div>
+            
+<!--            <div class="compare2"><a id="compareall" href="#comparison">Compare all <i class="fa fa-arrow-right"></i></a></div>-->
+        </div>
+
+        <!-- Compare -->
+           
+                <div class="compare"><a id="compareall" href="#comparison">Compare all <i class="fa fa-arrow-right"></i></a></div>
+            
+
+
+
+        <!-- Modal content -->
+        <div id="Modal1">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>Dictionary</h1>
+                        
+                        <div  id="btn-close-modal" class="close-Modal1"> 
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <strong>Information type:</strong><br>
+                        Provides definitions of words. Like encyclopedias, they can either be general or topic-specific.
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Useful for:</h3>
+                        <p>Defining key terms for research.</p>
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Advantages:</h3>
+                        <p>Useful for clarifying your understanding of key terms.</p>
+                    </div>
+                    <div class="modal-3col last-col">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <h3>Disadvantages:</h3>
+                        <p>Do not give details or explanations about ideas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Modal2">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>Newspaper</h1>
+                        <div  id="btn-close-modal" class="close-Modal2"> 
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <strong>Information type:</strong><br>
+                        A collection of articles about current events, usually published daily.
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Useful for:</h3>
+                        <p>Finding current information about international, national and local events.</p>
+                        <p>Finding editorials, commentaries, expert or popular opinions.</p>
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Advantages:</h3>
+                        <p>Up-to-date information.</p>
+                    </div>
+                    <div class="modal-3col last-col">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <h3>Disadvantages:</h3>
+                        <p>Quickly becomes dated.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Modal3">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>E-books</h1>
+                        <div  id="btn-close-modal" class="close-Modal3"> 
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <strong>Information type:</strong><br>
+                        A book-length publication in electronic form.
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Useful for:</h3>
+                        <p>Finding information to put your topic in context.</p>
+                        <p>Finding historical information or summaries on a topic.</p>
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Advantages:</h3>
+                        <p>Easy to access and find information within the e-book.</p>
+                        <p>Ability to select, copy, highlight and annotate text.</p>
+                        <p>Easier to update than printed books.</p>
+                    </div>
+                    <div class="modal-3col last-col">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <h3>Disadvantages:</h3>
+                        <p>Needs to be read on an electronic device.</p>
+                        <p>Some self-publishing means e-books aren’t always as rigorously checked as printed books.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Modal4">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>Encyclopedia</h1>
+                        <div  id="btn-close-modal" class="close-Modal4"> 
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <strong>Information type:</strong><br>
+                        Collections of short, factual entries, either general or topic-specific.
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Useful for:</h3>
+                        <p>Finding background information on a topic.</p>
+                        <p>Finding key ideas, important dates or concepts.</p>
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Advantages:</h3>
+                        <p>Provide background information as a useful starting place for further research.</p>
+                    </div>
+                    <div class="modal-3col last-col">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <h3>Disadvantages:</h3>
+                        <p>Can become outdated.</p>
+                    </div>
+                    <div class="note">
+                        <strong>Note:</strong><br> Wikipedia is an internet encyclopaedia, to which anyone can add information. There’s no guarantee information is accurate, but it can be a good starting place to gain an overview of a topic.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Modal5">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>Books</h1>
+                        <div  id="btn-close-modal" class="close-Modal5"> 
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <strong>Information type:</strong><br>
+                        Books cover virtually any topic. For research purposes, you’ll probably be looking for books drawing together the information on your topic.
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Useful for:</h3>
+                        <p>Finding information to put your topic in context.</p>
+                        <p>Finding historical information or summaries on a topic.</p>
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Advantages:</h3>
+                        <p>Accurate and credible information that has been edited.</p>
+                    </div>
+                    <div class="modal-3col last-col">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <h3>Disadvantages:</h3>
+                        <p>Information can become dated, as books are difficult to update.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Modal6">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>Magazine</h1>
+                        <div  id="btn-close-modal" class="close-Modal6"> 
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <strong>Information type:</strong><br>
+                        A collection of articles and images on topics of popular interest.
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Useful for:</h3>
+                        <p>Finding information or opinions about popular culture.</p>
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Advantages:</h3>
+                        <p>Timely information about current events.</p>
+                    </div>
+                    <div class="modal-3col last-col">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <h3>Disadvantages:</h3>
+                        <p>Information can become dated.</p>
+                        <p>Written for a general audience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Modal7">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>Journal</h1>
+                        <div  id="btn-close-modal" class="close-Modal7"> 
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <strong>Information type:</strong><br>
+                        A collection of articles written by experts, usually reviewed to ensure they are of high quality. Articles cover very specific topics.
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Useful for:</h3>
+                        <p>Conducting scholarly research.</p>
+                    </div>
+                    <div class="modal-3col">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Advantages:</h3>
+                        <p>Credible and detailed information about specific topics.</p>
+                    </div>
+                    <div class="modal-3col last-col">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <h3>Disadvantages:</h3>
+                        <p>Information can become dated.</p>
+                        <p>Not easily accessible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="comparison">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-comparison"> 
+                <i class="fa fa-times-circle"></i>
+            </div>
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+                <div class="modal-container">
+                    <div class="modal-header">
+                        
+                        <h1>Comparison</h1>
+                    </div>
+                    <table class="rwd-table">
+                      <tr>
+                        <th>Item</th>
+                        <th>Useful for</th>
+                        <th>Advantages</th>
+                        <th>Disadvantages</th>
+                      </tr>
+                      <tr>
+                        <td data-th="Item">Dictionary</td>
+                        <td data-th="Useful for">Defining key terms for research.</td>
+                        <td data-th="Advantages">Useful for clarifying your understanding of key terms.</td>
+                        <td data-th="Disdvantages">Do not give details or explanations about ideas.</td>
+                      </tr>
+                      <tr>
+                        <td data-th="Item">Newspaper</td>
+                        <td data-th="Useful for">Finding current information about international, national and local events / Finding editorials, commentaries, expert or popular opinions.</td>
+                        <td data-th="Advantages">Up-to-date information.</td>
+                        <td data-th="Disdvantages">Quickly becomes dated.</td>
+                      </tr>
+                      <tr>
+                        <td data-th="Item">E-books</td>
+                        <td data-th="Useful for">Finding information to put your topic in context / Finding historical information or summaries on a topic.</td>
+                        <td data-th="Advantages">Easy to access and find information within the e-book / Ability to select, copy, highlight and annotate text / Easier to update than printed books.</td>
+                        <td data-th="Disdvantages">Needs to be read on an electronic device / Some self-publishing means e-books aren’t always as rigorously checked as printed books.</td>
+                      </tr>
+                        <tr>
+                        <td data-th="Item">Encyclopedia</td>
+                        <td data-th="Useful for">Finding background information on a topic / Finding key ideas, important dates or concepts.</td>
+                        <td data-th="Advantages">Provide background information as a useful starting place for further research.</td>
+                        <td data-th="Disdvantages">Can become outdated.</td>
+                      </tr>
+                      <tr>
+                        <td data-th="Item">Books</td>
+                        <td data-th="Useful for">Finding information to put your topic in context / Finding historical information or summaries on a topic.</td>
+                        <td data-th="Advantages">Accurate and credible information that has been edited.</td>
+                        <td data-th="Disdvantages">Information can become dated, as books are difficult to update.</td>
+                      </tr>
+                      <tr>
+                        <td data-th="Item">Magazine</td>
+                        <td data-th="Useful for">Finding information or opinions about popular culture.</td>
+                        <td data-th="Advantages">Timely information about current events.</td>
+                        <td data-th="Disdvantages">Information can become dated / Written for a general audience.</td>
+                      </tr>
+                      <tr>
+                        <td data-th="Item">Journal</td>
+                        <td data-th="Useful for">Conducting scholarly research.</td>
+                        <td data-th="Advantages">Credible and detailed information about specific topics.</td>
+                        <td data-th="Disdvantages">Information can become dated / Not easily accessible.</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/animatedModal.js"></script>
+        <script>
+            $("#dictionary").animatedModal({
+              modalTarget:'Modal1',
+            });
+            $("#newspaper").animatedModal({
+              modalTarget:'Modal2',
+            });
+            $("#ebooks").animatedModal({
+              modalTarget:'Modal3',
+            });
+            $("#encyclopedia").animatedModal({
+              modalTarget:'Modal4',
+            });
+            $("#books").animatedModal({
+              modalTarget:'Modal5',
+            });
+            $("#magazine").animatedModal({
+              modalTarget:'Modal6',
+            });
+            $("#journal").animatedModal({
+              modalTarget:'Modal7',
+            });
+            
+           
+            $("#compareall").animatedModal({
+              modalTarget:'comparison',
+            });
+
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('.accordion').accordion({defaultOpen: 'section1'}); //some_id section1 in demo
+        });
+    </script>
+
+    </body>
+</html>

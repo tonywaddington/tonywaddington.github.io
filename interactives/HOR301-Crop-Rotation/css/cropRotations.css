@@ -1,0 +1,104 @@
+/*Last updated - Tony Waddington, 27/03/17 13.35 */
+
+body, html {
+	font-family: "Lato", arial, helvetica, sans-serif;
+    color: #484c54;
+    height: 100%;
+    text-align: center;
+/*    width: 100%;*/
+    margin: 0;
+    padding:0;
+    font-weight: 400;
+    background-color: rgb(222,211,134);
+    overflow: hidden;
+    background-image: url(../img/background.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.tooltip_templates {
+    display: none;
+}
+
+.carrot:hover, .wheat:hover, .grass:hover, .barley:hover {
+    cursor: pointer;
+}
+
+
+h1 {
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 8px;
+    margin-bottom: 10px;    
+    display: inline-block;
+    margin-top: -10px;
+    align-self: center;
+    padding-top: 17px;
+    padding-right: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding-bottom: 20px;
+    z-index: 3;
+/*    opacity: 0;*/
+    
+}
+
+.heading {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background: #5BC4BF;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background: #419794;
+    cursor:  pointer;   
+}
+
+.heading img {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+#grass-soil, #carrot-soil, #barley-soil {
+    opacity: 0.8;
+}
+
+#line {
+    
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 200px);
+}
+#arrows {
+    opacity: 0;
+    transition: opacity 0.3s;
+}

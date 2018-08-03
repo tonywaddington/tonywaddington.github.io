@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+	font-family: "Lato", arial, helvetica, sans-serif;
+    color: #484c54;
+    height: 100%;
+/*    width: 100%;*/
+    margin: 0;
+    padding:0;
+    font-weight: 200;
+    background-color: #CFECEB;
+    overflow: hidden;
+}
+
+h1 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ADDCE0;
+    font-weight: 700;
+}
+
+.info {
+    float: left;
+/*    width: calc(45% - 40px);*/
+    width: 50%;
+    padding: 20px;
+}
+.diagram {
+    width: 50%;
+    height: 100%;
+    /*max-height: 520px;*/
+    float: left;
+    position: relative;
+}
+
+svg {
+    height: 560px;
+    width: 100%;
+    /*max-height: 80%;*/
+}
+@media (max-height: 600px) {
+    svg {
+        max-height: 440px;
+    }
+}
+.container {
+    width: 100%;
+    max-width: 920px;
+    margin: 10px auto;
+}
+
+.fade-out {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background-image: url(../img/fade.png);
+    background-repeat: repeat-x;
+    bottom: 0;
+}
+
+#eye-button, #lung-button, #bicep-button, #armpit-button, #stomache-button, #colon-button, #bladder-button, #vagina-button, #leg-button, #leg2-button {
+    opacity: 0.1;
+}
+
+#eye-button-bg, #lung-button-bg, #bicep-button-bg, #armpit-button-bg, #stomache-button-bg, #colon-button-bg, #bladder-button-bg, #vagina-button-bg, #leg-button-bg, #leg2-button-bg {
+    -webkit-animation-name: pulse
+    -webkit-animation-duration: 4s;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    fill: #CFECEB;
+}
+#eye-group:hover circle, #lung-group:hover circle, #bicep-group:hover circle, #armpit-group:hover circle, #stomache-group:hover circle, #colon-group:hover circle, #bladder-group:hover circle, #vagina-group:hover circle, #leg-group:hover circle, #leg2-group:hover circle {
+   fill: #F5D010;
+    opacity: 0.7;
+    animation: none;
+    cursor: pointer;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes pulse {
+    0% {opacity: 0;}
+    50% {opacity: 0.4;}
+    100% {opacity: 0;}
+}
+
+/* Standard syntax */
+@keyframes pulse {
+    0% {opacity: 0;}
+    50% {opacity: 0.4;}
+    100% {opacity: 0;}
+}
+
+.modal-container {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #CFECEB;
+/*    padding: 20px 15px 25px;*/
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(51,52,56,0.66);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(51,52,56,0.66);
+    box-shadow: 0px 0px 20px 0px rgba(51,52,56,0.66);
+}
+
+.modal-info i {
+    font-size: 50px;
+    color: #60BFBC;
+    float: right;
+    margin: 18px 10px;
+}
+
+.modal-info i:hover {
+    color: #007484;
+    cursor: pointer;
+}
+.modal-info p {
+    font-size: 18px;
+    margin-right: 63px;
+    padding: 30px;
+    border-right: 1px solid #BFE6E4;
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+    line-height: 24px;
+}
+
+.outro {
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(51,52,56,0.16);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(51,52,56,0.16);
+    box-shadow: 0px 0px 20px 0px rgba(51,52,56,0.16);
+}
+
+.outro p:first-of-type {
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(51,52,56,0.1);
+}
+
+.outro i {
+    float: right;
+    color: #60BFBC;
+    font-size: 45px;
+    margin-top: -6px;
+}
+
+.bellow-text {
+    display: none;
+}
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .info, .diagram {
+        width: 100%;
+    }   
+    
+    h1 {
+        margin-top: 0;
+    }
+    
+    .right-text {
+        display: none;
+    }
+    
+    .bellow-text {
+        display:inline-block;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .modal-container {
+        margin: 30px 15px;
+    }
+}

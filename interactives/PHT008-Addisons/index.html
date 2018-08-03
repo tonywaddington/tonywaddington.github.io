@@ -1,0 +1,1186 @@
+<!--Last updated - Tony Waddington, 16/03/16 15.25pm -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Symptoms of Addison's Disease &amp; Cushing's Syndrome</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+            /* PRELOADER */
+            
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript, 
+        if it's not present, don't show loader */
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(img/Preloader_3.gif) center no-repeat #fff;
+        }
+        </style>
+        
+<!-- FONTS-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:200,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        
+<!--PAGE TRANSITION -->
+        <link rel="stylesheet" href="css/demo-single-page.css"/>
+        <link rel="stylesheet" href="css/transition-animations.css"/>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+        <script src="js/animatedModal.js"></script>
+        
+<!-- custom scrollbar stylesheet -->
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+        
+<!-- CORE STYLE -->
+        <link rel="stylesheet" href="css/addisons.css">
+        
+        
+        
+<!--Tooltip        -->
+        <script src="js/main.js"></script>
+        
+        <script>
+            
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	$(window).load(function() {
+		//CODE FOR HANDLING HASH OPEN DIFFERENT DIV 
+		//format of has #trigger-<page number>-<page number>. e.g. index.html#trigger-6-7
+		var pages = [], timeouts = 0, maxtimeout = 10;//wait for 10seconds before giving up
+		function navigatetos(){
+			if(pages.length > 0){
+				var page = pages.shift();
+				//Make sure the button need to click is visible and transaction animation is done.
+				if($(".pt-page-current").length == 1 && 
+					$(".pt-page-current .pt-trigger[data-goto='"+page+"']").is(':visible') &&
+					/^\d+$/.test(page)){
+					timeouts = 0;
+					$(".pt-page-current .pt-trigger[data-goto='"+page+"']").click();
+				}
+				else if($(".pt-page-current").length == 1 && 
+					$("#"+page).is(':visible')){
+					timeouts = 0;
+					$("#"+page).click();					
+				}
+				else {
+					pages.unshift(page);
+					timeouts++;
+				}
+				
+				//Give enough time for the transaction animation to finish
+				if(pages.length > 0 && timeouts < (maxtimeout * 2)){
+					setTimeout( function(){
+							navigatetos(); 
+						}, 500);
+				}
+				
+			}
+		}
+
+		// Animate loader off screen	
+		$(".se-pre-con").fadeOut("slow", function() {
+				//Parse the loaction hash and check if there is request to open certain block
+				if($.trim(window.location.hash) != '' && $.trim(window.location.hash).startsWith("#trigger-")){
+					pages = $.trim(window.location.hash).replace("#trigger-", '').split('-');
+					navigatetos();
+				}
+
+			}
+		);
+		
+	});
+</script>
+        
+        <script>
+            
+            var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            
+            var listAnimation = 'rubberBand animated';
+            
+            
+            function showSymptom1() {
+                 $('#symptom1').show();  $('.listSymptom1').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+
+                }
+                function showSymptom2() {
+                        $('#symptom2').show();
+                    $('.listSymptom2').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom3() {
+                        $('#symptom3').show();
+                    $('.listSymptom3').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom4() {
+                        $('#symptom4').show();
+                    $('.listSymptom4').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom5() {
+                        $('#symptom5').show();
+                    $('.listSymptom5').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom6() {
+                        $('#symptom6').show();
+                    $('.listSymptom6').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom7() {
+                        $('#symptom7').show();
+                    $('.listSymptom7').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom8() {
+                        $('#symptom8').show();
+                    $('.listSymptom8').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom9() {
+                        $('#symptom9').show();
+                    $('.listSymptom9').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom10() {
+                        $('#symptom10').show();
+                    $('.listSymptom10').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom11() {
+                        $('#symptom11').show();
+                    $('.listSymptom11').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom12() {
+                        $('#symptom12').show();
+                    $('.listSymptom12').delay(1000).fadeIn(500).addClass(listAnimation).one(animationend,function() {
+                        $(this).removeClass(listAnimation);
+                        });
+                    }
+                function showSymptom13() {
+                        $('#symptom13').show();
+                    }
+            
+            $(document).ready(function() {
+                $('.mobile-list .symptom-box').hide();
+                $('.list p').hide();
+                
+                
+                
+                $(function() {
+                    var animationName = 'fadeInOut';
+                    $('.hyper').on('click',function() {
+                        $('.hyper .feedback').addClass(animationName).one(animationend,function() {
+                        $(this).removeClass(animationName);
+                        });
+                    });      
+                });
+                $(function() {
+                    var animationName = 'fadeInOut';
+                    $('.hypo').on('click',function() {
+                        $('.hypo .feedback').addClass(animationName).one(animationend,function() {
+                        $(this).removeClass(animationName);
+                        });
+                    });      
+                });
+                
+                $(function() {
+                    var animationName = 'tada animated';
+                    $('.answer').on('click',function() {
+                        $('.feedback i').addClass(animationName).one(animationend,function() {
+                        $(this).removeClass(animationName);
+                        });
+                    });      
+                });
+                
+                $(function() {
+                    var animationName = 'bounce animated';
+                    $('.pt-trigger').on('click',function() {
+                        $('.list-btn').addClass(animationName).one(animationend,function() {
+                        $(this).removeClass(animationName);
+                        });
+                    });      
+                });
+                
+                $('.last-trigger').click(function() {
+                    $('.top-instruction,.summary').css('transition-delay','1.3s');
+                   $('.top-instruction').removeClass('active');
+                    $('.summary').addClass('active');
+                });
+                
+                $('.restart-btn').click(function() {
+                    $('.list p').hide();
+                    $('.top-instruction,.summary').css('transition-delay','0s');
+                   $('.summary').removeClass('active');
+                    $('.top-instruction').addClass('active');
+                    
+                       $('.list-btn1').removeClass('list-btn1');
+                });
+                
+                $('.list-btn,.close-btn-bg').click(function() {
+                  $('.mobile-list').toggleClass('open'); 
+                   $('.close-btn-bg').toggleClass('open'); 
+               }); 
+
+           }); 
+            
+            
+
+        
+        </script>
+ 
+    </head>
+    <body>
+        <div class="se-pre-con"></div>
+        
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+       
+ <div class="pt-wrapper">
+    
+    <div class="navigation">
+        <h1 class="top-instruction active pt-trigger" data-animation="1" data-goto="14">Identify the symptoms of Addison's Disease &amp; Cushing's Syndrome</h1> 
+        
+        <h1 class="summary">Summary</h1>
+     </div>
+     
+ <!-- 1. Weight loss(A)-->
+            <div class="pt-page">   
+                
+              <div class="content">     
+                     
+                    <p class="question-number">Q1/13</p>
+                    <p class="question">Weight loss</p>
+            
+                  <div class="answer-container first-answers">
+                      <div class="answer hypo pt-trigger" data-animation="1" data-goto="2" onclick="showSymptom1();">
+                        <p class="symptom">Symptom of</p>
+                          <h2>Addison's disease</h2>
+                          <p class="description">
+                            The adrenal glands do not produce enough steroid hormones
+                          </p>
+
+                          <div class="correct feedback">
+                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                          </div>
+                      </div>
+
+                      <img src="img/weightLoss.svg" class="graphic" alt="Weight loss">
+
+                      <div class="answer hyper">
+                        <p class="symptom">Symptom of</p>
+                          <h2>Cushing's syndrome</h2>
+                          <p class="description">
+                            The adrenal glands produce excessive steroid hormones
+                          </p>
+
+                          <div class="wrong feedback">
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="list-btn list-btn1">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+                  
+                </div>
+            </div>
+        
+<!-- 2. Thinning of scalp hair (C)-->
+        <div class="pt-page">   
+                
+              <div class="content">     
+                     
+                    <p class="question-number">Q2/13</p>
+                    <p class="question">Thinning of scalp hair</p>
+                 
+                  <div class="answer-container">
+                  
+                      <div class="answer hypo">
+                        <p class="symptom">Symptom of</p>
+                          <h2>Addison's disease</h2>
+                          <p class="description">
+                            The adrenal glands do not produce enough steroid hormones
+                          </p>
+
+                          <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+
+                          <div class="wrong feedback">
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                          </div>
+                      </div>
+
+                          <img src="img/hairLoss.svg" class="graphic" alt="Thinning of scalp hair">
+
+                      <div class="answer hyper pt-trigger" data-animation="1" data-goto="3" onclick="showSymptom2();">
+                        <p class="symptom">Symptom of</p>
+                          <h2>Cushing's syndrome</h2>
+                          <p class="description">
+                            The adrenal glands produce excessive steroid hormones
+                          </p>
+                          
+                          <div class="list">
+                            <p class="listSymptom2">Thinning of scalp hair</p>
+                            <p class="listSymptom3">A ‘moon face’ appearance</p>
+                            <p class="listSymptom5">Increased susceptibility to infection</p>
+                            <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                            <p class="listSymptom10">Osteoporosis</p>
+                            <p class="listSymptom11">High blood pressure</p>
+                        </div>
+                          <div class="correct feedback">
+                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                          </div>
+                      </div>
+                  
+                  </div>
+                  
+                  <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+                
+                </div>
+            </div>
+     
+
+     
+<!-- 3. A ‘moon face’ appearance(C)  -->
+            <div class="pt-page">   
+            
+                <div class="content">     
+                     
+                    <p class="question-number">Q3/13</p>
+                    <p class="question">A ‘moon face’ appearance</p>
+                  
+                    
+                    <div class="answer-container">
+                  
+                          <div class="answer hypo">
+                            <p class="symptom">Symptom of</p>
+                              <h2>Addison's disease</h2>
+                              <p class="description">
+                                The adrenal glands do not produce enough steroid hormones
+                              </p>
+                              
+                              
+                            <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+
+                              <div class="wrong feedback">
+                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                              </div>        
+                          </div>
+
+                          <img src="img/moon.svg" class="graphic" alt="A ‘moon face’ appearance">
+
+                          <div class="answer hyper pt-trigger" data-animation="1" data-goto="4" onclick="showSymptom3();">
+                            <p class="symptom">Symptom of</p>
+                              <h2>Cushing's syndrome</h2>
+                              <p class="description">
+                                The adrenal glands produce excessive steroid hormones
+                              </p>
+                              
+                              
+                              <div class="list">
+                                <p class="listSymptom2">Thinning of scalp hair</p>
+                                <p class="listSymptom3">A ‘moon face’ appearance</p>
+                                <p class="listSymptom5">Increased susceptibility to infection</p>
+                                <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                                <p class="listSymptom10">Osteoporosis</p>
+                                <p class="listSymptom11">High blood pressure</p>
+                            </div>
+                              <div class="correct feedback">
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                              </div>
+
+                          </div>
+                  
+                    </div>
+                    
+                    <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+                </div>
+          </div>
+   
+
+
+
+<!-- 4. Low blood glucose(A)-->
+
+    <div class="pt-page">       
+        <div class="content">     
+                     
+                    <p class="question-number">Q4/13</p>
+                    <p class="question">Low blood glucose</p>
+                  
+            <div class="answer-container">
+                  
+                  <div class="answer hypo pt-trigger" data-animation="1" data-goto="5" onclick="showSymptom4();">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Addison's disease</h2>
+                      <p class="description">
+                        The adrenal glands do not produce enough steroid hormones
+                      </p>
+                      
+                      
+                      <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+                      
+                      <div class="correct feedback">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                      </div>
+                      
+                  </div>
+                
+                <img src="img/lowGlucose.svg" class="graphic" alt="Low blood glucose">
+                
+                  <div class="answer hyper">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Cushing's syndrome</h2>
+                      <p class="description">
+                        The adrenal glands produce excessive steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+                      <div class="wrong feedback">
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                      </div>
+                      
+                  </div>
+            </div>
+            <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>      
+        </div>    
+    </div>
+                
+<!--5. Increased susceptibility to infection(C)-->
+
+    <div class="pt-page">       
+        <div class="content">     
+                     
+                    <p class="question-number">Q5/13</p>
+                    <p class="question">Increased susceptibility to infection</p>
+                  <div class="answer-container">
+                  
+                      <div class="answer hypo">
+                        <p class="symptom">Symptom of</p>
+                          <h2>Addison's disease</h2>
+                          <p class="description">
+                            The adrenal glands do not produce enough steroid hormones
+                          </p>
+                          
+                          <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+                          <div class="wrong feedback">
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                          </div>
+
+                      </div>
+                      
+                      <img src="img/infection.svg" class="graphic" alt="Increased susceptibility to infection">
+                      
+                      <div class="answer hyper pt-trigger" data-animation="1" data-goto="6" onclick="showSymptom5();">
+                        <p class="symptom">Symptom of</p>
+                          <h2>Cushing's syndrome</h2>
+                          <p class="description">
+                            The adrenal glands produce excessive steroid hormones
+                          </p>
+                          
+                          <div class="list">
+                            <p class="listSymptom2">Thinning of scalp hair</p>
+                            <p class="listSymptom3">A ‘moon face’ appearance</p>
+                            <p class="listSymptom5">Increased susceptibility to infection</p>
+                            <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                            <p class="listSymptom10">Osteoporosis</p>
+                            <p class="listSymptom11">High blood pressure</p>
+                        </div>
+                          <div class="correct feedback">
+                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                          </div>
+                      </div>
+                </div>
+            <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+        </div>      
+    </div>
+                
+<!--6. Truncal (chest and stomach) obesity(C)-->
+
+    <div class="pt-page">       
+        <div class="content">     
+                     
+                    <p class="question-number">Q6/13</p>
+                    <p class="question">Truncal (chest and stomach) obesity</p>
+                  
+            <div class="answer-container">
+                      
+                  <div class="answer hypo">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Addison's disease</h2>
+                      <p class="description">
+                        The adrenal glands do not produce enough steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+                      
+                      <div class="wrong feedback">
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                      </div>
+                  </div>
+                  
+                      <img src="img/obesity.svg" class="graphic" alt="Truncal (chest and stomach) obesity">
+                      
+                  <div class="answer hyper pt-trigger" data-animation="1" data-goto="7" onclick="showSymptom6();">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Cushing's syndrome</h2>
+                      <p class="description">
+                        The adrenal glands produce excessive steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+                      <div class="correct feedback">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                      </div>
+                      
+                  </div>
+            </div>
+            <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+        </div>     
+    </div>
+                
+<!--7. Chronic worsening fatigue(A)-->
+
+    <div class="pt-page">       
+        <div class="content">     
+                     
+             <p class="question-number">Q7/13</p>
+             <p class="question">Chronic worsening fatigue</p>
+             
+            <div class="answer-container">     
+
+                  <div class="answer hypo pt-trigger" data-animation="1" data-goto="8" onclick="showSymptom7();">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Addison's disease</h2>
+                      <p class="description">
+                        The adrenal glands do not produce enough steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+                      <div class="correct feedback">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                      </div>
+                      
+                  </div>
+                  
+                <img src="img/fatigue.svg" class="graphic" alt="Chronic worsening fatigue">
+                
+                  <div class="answer hyper">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Cushing's syndrome</h2>
+                      <p class="description">
+                        The adrenal glands produce excessive steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+                      <div class="wrong feedback">
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                      </div>
+                      
+                      
+                  </div>
+            </div>  
+            <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+         </div>    
+    </div>
+        
+
+
+<!--8. Low blood pressure(A)-->
+
+<div class="pt-page">          
+  
+                
+    <div class="content">     
+                     
+        <p class="question-number">Q8/13</p>
+        <p class="question">Low blood pressure</p>
+                
+        <div class="answer-container">
+                  
+              <div class="answer hypo pt-trigger" data-animation="1" data-goto="9" onclick="showSymptom8();">
+                <p class="symptom">Symptom of</p>
+                  <h2>Addison's disease</h2>
+                  <p class="description">
+                    The adrenal glands do not produce enough steroid hormones
+                  </p>
+                  
+                  <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+                  <div class="correct feedback">
+                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                  </div>
+
+              </div>
+            
+            <img src="img/lowPressure.svg" class="graphic" alt="Low blood pressure">
+
+              <div class="answer hyper">
+                <p class="symptom">Symptom of</p>
+                  <h2>Cushing's syndrome</h2>
+                  <p class="description">
+                    The adrenal glands produce excessive steroid hormones
+                  </p>
+                  
+                  <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+
+                  <div class="wrong feedback">
+                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                  </div>
+
+              </div>
+                  
+            </div>
+        <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>
+</div>
+     
+     <!--9. Loss of appetite(A)-->
+
+<div class="pt-page">          
+  
+                
+      <div class="content">     
+
+            <p class="question-number">Q9/13</p>
+            <p class="question">Loss of appetite</p>
+
+          <div class="answer-container">
+          
+              <div class="answer hypo pt-trigger" data-animation="1" data-goto="10" onclick="showSymptom9();">
+                <p class="symptom">Symptom of</p>
+                <h2>Addison's disease</h2>
+                  <p class="description">The adrenal glands do not produce enough steroid hormones</p>
+                  
+                  <div class="list">
+                    <p class="listSymptom1">Weight loss</p>
+                    <p class="listSymptom4">Low blood glucose</p>
+                    <p class="listSymptom7">Chronic worsening fatigue</p>
+                    <p class="listSymptom8">Low blood pressure</p>
+                    <p class="listSymptom9">Loss of appetite</p>
+                    <p class="listSymptom12">Darkening of the skin</p>
+                </div>
+              <div class="correct feedback">
+                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+              </div>
+          </div>
+              
+              <img src="img/appetite.svg" class="graphic" alt="Loss of appetite">
+
+          <div class="answer hyper">
+            <p class="symptom">Symptom of</p>
+              <h2>Cushing's syndrome</h2>
+              <p class="description">The adrenal glands produce excessive steroid hormones</p>
+              
+                  <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+              <div class="wrong feedback">
+                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+              </div>
+          </div>
+          </div>
+            <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+        </div>    
+</div>
+     
+       
+     <!--10. Osteoporosis (C)-->
+
+<div class="pt-page">          
+           
+      <div class="content">     
+
+            <p class="question-number">Q10/13</p>
+            <p class="question">Osteoporosis</p>
+
+          <div class="answer-container">
+              
+                  <div class="answer hypo">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Addison's disease</h2>
+                      <p class="description">
+                        The adrenal glands do not produce enough steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+
+                      <div class="wrong feedback">
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                      </div>
+
+                  </div>
+              
+              <img src="img/bones.svg" class="graphic" alt="Osteoporosis">
+
+                  <div class="answer hyper pt-trigger" data-animation="1" data-goto="11" onclick="showSymptom10();">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Cushing's syndrome</h2>
+                      <p class="description">
+                        The adrenal glands produce excessive steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+                      <div class="correct feedback">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                      </div>
+                    </div>
+          </div>
+          <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>    
+</div>
+     
+     <!--11. High blood pressure(C)-->
+
+<div class="pt-page">          
+  
+                
+      <div class="content">     
+
+            <p class="question-number">Q11/13</p>
+            <p class="question">High blood pressure</p>
+          
+          <div class="answer-container">
+              
+              <div class="answer hypo">
+                <p class="symptom">Symptom of</p>
+                  <h2>Addison's disease</h2>
+                  <p class="description">
+                    The adrenal glands do not produce enough steroid hormones
+                  </p>
+                  
+                  <div class="list">
+                    <p class="listSymptom1">Weight loss</p>
+                    <p class="listSymptom4">Low blood glucose</p>
+                    <p class="listSymptom7">Chronic worsening fatigue</p>
+                    <p class="listSymptom8">Low blood pressure</p>
+                    <p class="listSymptom9">Loss of appetite</p>
+                    <p class="listSymptom12">Darkening of the skin</p>
+                </div>
+
+                  <div class="wrong feedback">
+                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                  </div>
+              </div>
+              
+               <img src="img/highPressure.svg" class="graphic" alt="High blood pressure">
+
+              <div class="answer hyper pt-trigger" data-animation="1" data-goto="12" onclick="showSymptom11();">
+                <p class="symptom">Symptom of</p>
+                  <h2>Cushing's syndrome</h2>
+                  <p class="description">
+                    The adrenal glands produce excessive steroid hormones
+                  </p>
+                  
+                  <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+                  <div class="correct feedback">
+                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                  </div>
+              </div>
+          
+          </div>
+          <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>    
+</div>
+     
+     <!--12. Darkening of the skin(A)-->
+
+<div class="pt-page">          
+  
+                
+      <div class="content">     
+
+            <p class="question-number">Q12/13</p>
+            <p class="question">Darkening of the skin</p>
+
+          <div class="answer-container">
+              
+                  <div class="answer hypo pt-trigger" data-animation="1" data-goto="13" onclick="showSymptom12();">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Addison's disease</h2>
+                      <p class="description">
+                        The adrenal glands do not produce enough steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                        <p class="listSymptom1">Weight loss</p>
+                        <p class="listSymptom4">Low blood glucose</p>
+                        <p class="listSymptom7">Chronic worsening fatigue</p>
+                        <p class="listSymptom8">Low blood pressure</p>
+                        <p class="listSymptom9">Loss of appetite</p>
+                        <p class="listSymptom12">Darkening of the skin</p>
+                    </div>
+
+                      <div class="correct feedback">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                      </div>
+                </div>
+              
+              <img src="img/skinDarkening.svg" class="graphic" alt="Darkening of the skin">
+
+                  <div class="answer hyper">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Cushing's syndrome</h2>
+                      <p class="description">The adrenal glands produce excessive steroid hormones</p>
+                      
+                      <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+                      <div class="wrong feedback">
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                      </div>
+                  </div>
+          </div>
+         <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div> 
+    </div>    
+</div>
+     
+    
+     
+     <!--13. High blood glucose(C)-->
+
+<div class="pt-page">          
+  
+                
+      <div class="content">     
+
+            <p class="question-number">Q13/13</p>
+            <p class="question">High blood glucose</p>
+          <div class="answer-container">
+
+                  <div class="answer hypo">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Addison's disease</h2>
+                      <p class="description">
+                        The adrenal glands do not produce enough steroid hormones
+                      </p>
+                      
+                      <div class="list">
+                            <p class="listSymptom1">Weight loss</p>
+                            <p class="listSymptom4">Low blood glucose</p>
+                            <p class="listSymptom7">Chronic worsening fatigue</p>
+                            <p class="listSymptom8">Low blood pressure</p>
+                            <p class="listSymptom9">Loss of appetite</p>
+                            <p class="listSymptom12">Darkening of the skin</p>
+                        </div>
+
+                      <div class="wrong feedback">
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                      </div>
+
+                  </div>
+              
+                <img src="img/highGlucose.svg" class="graphic" alt="High blood glucose">
+              
+                  <div class="answer hyper pt-trigger last-trigger" data-animation="1" data-goto="14" onclick="showSymptom13();">
+                    <p class="symptom">Symptom of</p>
+                      <h2>Cushing's syndrome</h2>
+                      <p class="description">The adrenal glands produce excessive steroid hormones</p>
+                      
+                      <div class="list">
+                        <p class="listSymptom2">Thinning of scalp hair</p>
+                        <p class="listSymptom3">A ‘moon face’ appearance</p>
+                        <p class="listSymptom5">Increased susceptibility to infection</p>
+                        <p class="listSymptom6">Truncal (chest and stomach) obesity</p>
+                        <p class="listSymptom10">Osteoporosis</p>
+                        <p class="listSymptom11">High blood pressure</p>
+                    </div>
+                      <div class="correct feedback">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                      </div>
+                  </div>
+          </div>
+          <div class="list-btn">View lists <i class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>    
+</div>
+     
+     <!--14. Conclusion-->
+
+<div class="pt-page" style="background-color: #fff;">          
+
+  <div class="content">  
+      <p><strong>Well done:</strong></p>
+          
+        <p>The symptoms of Addison's disease usually develop gradually. Rapid onset of these symptoms indicates acute adrenal crisis and requires urgent medical attention.</p>
+      <p class="conclusion-para">Many people recognise that a rounded face and truncal obesity are typical symptoms of Cushing's syndrome. Well done if you were able to recognise all the others. Notice too how these symptoms are also known side effects of high dose steroid medications.</p>
+      <div class="conclusion-container">
+          <div class="col-2">
+            <h2>Addison's<br> disease</h2>
+
+              <div class="symptom-box">
+                <p>Weight loss</p><img src="img/weightLoss.svg">
+              </div>
+              <div class="symptom-box">
+                  <p>Low blood glucose</p><img src="img/lowGlucose.svg">
+              </div>
+              <div class="symptom-box">
+                  <p>Low blood pressure</p><img src="img/lowPressure.svg">
+              </div>
+              <div class="symptom-box">
+                  <p>Chronic worsening fatigue</p><img src="img/fatigue.svg">
+              </div>
+              
+              <div class="symptom-box">
+                  <p>Loss of appetite</p><img src="img/appetite.svg">
+              </div>
+              <div class="symptom-box">
+                  <p>Darkening of the skin</p><img src="img/skinDarkening.svg">
+              </div>
+              
+          </div>
+          <div class="divider"></div>
+          <div class="col-2 right-col">
+            <h2>Cushing's<br> syndrome</h2>
+              <div class="symptom-box">
+                <img src="img/obesity.svg"><p>Truncal (chest and stomach) obesity</p>
+              </div>
+              <div class="symptom-box">
+                <img src="img/highGlucose.svg"><p>High blood glucose</p>
+              </div>
+              <div class="symptom-box">
+                <img src="img/highPressure.svg"><p>High blood pressure</p>
+              </div>
+              <div class="symptom-box">
+                <img src="img/hairLoss.svg"><p>Thinning of scalp hair</p>
+              </div>
+              <div class="symptom-box">
+                <img src="img/moon.svg"><p>A 'moon face' appearance</p>
+              </div>
+              <div class="symptom-box">
+                <img src="img/infection.svg"><p>Increased susceptibility to infection</p>
+              </div>
+              <div class="symptom-box">
+                <img src="img/bones.svg"><p>Osteoporosis</p>
+              </div>
+              
+              
+              
+          </div>
+      </div>
+             <div class="restart-btn pt-trigger" data-animation="68" data-goto="1">Restart <i class="fa fa-undo" aria-hidden="true"></i></div>
+    </div>
+    
+    
+</div>
+     
+     
+<!--     MOBILE LIST-->
+    <div class="close-btn-bg">
+        <div class="close-mobile-list">Close <i class="fa fa-times" aria-hidden="true"></i></div>
+    </div>
+    <div class="mobile-list"> 
+     <div class="conclusion-container">
+          <div class="col-2">
+            <h2>Addison's<br> disease</h2>
+
+              <div class="symptom-box" id="symptom1">
+                <p>Weight loss</p><img src="img/weightLoss.svg">
+              </div>
+              <div class="symptom-box" id="symptom4">
+                  <p>Low blood glucose</p><img src="img/lowGlucose.svg">
+              </div>
+              <div class="symptom-box" id="symptom7">
+                  <p>Chronic worsening fatigue</p><img src="img/fatigue.svg">
+              </div>
+              <div class="symptom-box" id="symptom8">
+                  <p>Low blood pressure</p><img src="img/lowPressure.svg">
+              </div>
+              <div class="symptom-box" id="symptom9">
+                  <p>Loss of appetite</p><img src="img/appetite.svg">
+              </div>
+              <div class="symptom-box" id="symptom12">
+                  <p>Darkening of the skin</p><img src="img/skinDarkening.svg">
+              </div>
+              
+          </div>
+          <div class="divider"></div>
+          <div class="col-2 right-col">
+            <h2>Cushing's<br> syndrome</h2>
+              <div class="symptom-box" id="symptom2">
+                <img src="img/hairLoss.svg"><p>Thinning of scalp hair</p>
+              </div>
+              <div class="symptom-box" id="symptom3">
+                <img src="img/moon.svg"><p>A 'moon face' appearance</p>
+              </div>
+              <div class="symptom-box" id="symptom5">
+                <img src="img/infection.svg"><p>Increased susceptibility to infection</p>
+              </div>
+              <div class="symptom-box" id="symptom6">
+                <img src="img/obesity.svg"><p>Truncal (chest and stomach) obesity</p>
+              </div>
+              <div class="symptom-box" id="symptom10">
+                <img src="img/bones.svg"><p>Osteoporosis</p>
+              </div>
+              <div class="symptom-box" id="symptom11">
+                <img src="img/highPressure.svg"><p>High blood pressure</p>
+              </div>
+              <div class="symptom-box" id="symptom13">
+                <img src="img/highGlucose.svg"><p>High blood glucose</p>
+              </div>
+          </div>
+      </div>
+     </div>
+
+<!--    PT-WRAPPER END-->
+        </div>
+     
+     
+<!--scroll bar-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script>
+    (function($){
+        $(window).load(function(){
+            $(".pt-page").mCustomScrollbar({
+					theme:"minimal-dark"
+				});
+        });
+    })(jQuery);
+</script>
+-->
+        
+        <script src="js/transition.js"></script>
+    </body>
+</html>
