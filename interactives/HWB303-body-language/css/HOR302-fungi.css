@@ -352,10 +352,12 @@ header .fa.active {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    overflow-y: auto;
 }
 
 .modal {
-    max-width: 600px;
+    max-width: 405px;
+    width: 100%;
     -ms-flex-item-align: center;
         align-self: center;
     background-color: #fff;
@@ -370,22 +372,381 @@ header .fa.active {
     background-color: rgba(65,151,148,1);
     color: #fff;
     margin: 0;
-    padding: 10px;
-    font-size: 25px;
+    padding: 10px 15px;
+    font-size: 23px;
     font-weight: 400;
     border-bottom: rgba(0,0,0,0.1) solid 2px;
     border-radius: 4px 4px 0 0;
 }
 #intro-page p {
-    padding: 30px;
+    padding: 30px 20px;
     margin-bottom: 0;
-    border-bottom: rgba(0,0,0,0.1) solid 1px;
 }
 
 #intro-page .btn {
     width: 70px;
     margin: 0 auto;
     margin-top: 20px;    
+}
+
+.example {
+    width: calc(100% - 40px);
+    background-color: #ECEDF0;
+    margin: 10px 20px;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.example-header {
+    background-color: #419794;
+    width: 100%;
+    height: 70px;
+    padding-top: 12px;
+}
+
+.example-draggable {
+    width: 180px;
+    height: 44px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+    color: #9ea5b5;
+    font-size: 20px;
+    padding-top: 8px;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+.example-draggable.animated {
+    -webkit-animation-name: draggableAnimation;
+            animation-name: draggableAnimation;
+}
+
+@-webkit-keyframes draggableAnimation {
+    0% {
+        -webkit-transform: translate(0,0) scale(1);
+                transform: translate(0,0) scale(1);
+    }
+    
+    55% {
+        -webkit-transform: translate(0,0) scale(1);
+                transform: translate(0,0) scale(1);
+    }
+    
+    60% {
+        -webkit-transform: translate(0,0) scale(1.1);
+                transform: translate(0,0) scale(1.1);
+    }
+    
+    100% {
+        -webkit-transform: translate(0,100px) scale(1.1);
+                transform: translate(0,100px) scale(1.1);
+    }
+}
+
+
+@keyframes draggableAnimation {
+    0% {
+        -webkit-transform: translate(0,0) scale(1);
+                transform: translate(0,0) scale(1);
+    }
+    
+    55% {
+        -webkit-transform: translate(0,0) scale(1);
+                transform: translate(0,0) scale(1);
+    }
+    
+    60% {
+        -webkit-transform: translate(0,0) scale(1.1);
+                transform: translate(0,0) scale(1.1);
+    }
+    
+    100% {
+        -webkit-transform: translate(0,100px) scale(1.1);
+                transform: translate(0,100px) scale(1.1);
+    }
+}
+
+.example-draggable:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    opacity: 0;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+.example-draggable.animated:before {
+    -webkit-animation-name: shadowAnimation;
+            animation-name: shadowAnimation;
+}
+
+@-webkit-keyframes shadowAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    55% {
+        opacity: 0;
+    }
+    
+    60% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shadowAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    55% {
+        opacity: 0;
+    }
+    
+    60% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+.example-dropable {
+    background-color: #fff;
+    border: 1px dashed #9EA5B5;
+    max-width: 220px;
+    height: 55px;
+    margin: 0 auto;
+    margin-top: 35px;
+    color: #419794;
+    font-size: 30px;
+    padding-top: 19px;
+    position: relative;
+/*
+    -webkit-box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+*/
+}
+
+.example-dropable:before {
+    content: "";
+    padding-top: 19px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 0 0 0 1px rgba(255,255,255,.05), inset 0 0 10px 0 rgba(0,0,0,.5);
+    box-shadow: 0 0 0 1px rgba(255,255,255,.05), inset 0 0 10px 0 rgba(0,0,0,.5);
+    background-color: #f9f9f9;
+    opacity: 0;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+.example-dropable.animated:before {
+    -webkit-animation-name: dropableShadowAnimation;
+            animation-name: dropableShadowAnimation;
+}
+
+@-webkit-keyframes dropableShadowAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    70% {
+        opacity: 0;
+    }
+    
+    73% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dropableShadowAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    70% {
+        opacity: 0;
+    }
+    
+    73% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+#mouse {
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+    width: 40px;
+    height: 52px;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    z-index: 2;
+}
+
+#mouse.animated {
+    -webkit-animation-name: handAnimation;
+            animation-name: handAnimation;
+}
+
+@-webkit-keyframes handAnimation {
+    0% {
+        -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+    }
+    
+    50% {
+        -webkit-transform: translate(-60px,-140px) scale(1);
+                transform: translate(-60px,-140px) scale(1);
+    }
+    
+    55% {
+        -webkit-transform:translate(-60px,-140px)  scale(0.7);
+                transform:translate(-60px,-140px)  scale(0.7);
+    }
+    
+    60% {
+        -webkit-transform:translate(-60px,-140px)  scale(1);
+                transform:translate(-60px,-140px)  scale(1);
+    }
+    
+    100% {
+        -webkit-transform: translate(-60px,-40px);
+                transform: translate(-60px,-40px);
+    }
+}
+
+@keyframes handAnimation {
+    0% {
+        -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+    }
+    
+    50% {
+        -webkit-transform: translate(-60px,-140px) scale(1);
+                transform: translate(-60px,-140px) scale(1);
+    }
+    
+    55% {
+        -webkit-transform:translate(-60px,-140px)  scale(0.7);
+                transform:translate(-60px,-140px)  scale(0.7);
+    }
+    
+    60% {
+        -webkit-transform:translate(-60px,-140px)  scale(1);
+                transform:translate(-60px,-140px)  scale(1);
+    }
+    
+    100% {
+        -webkit-transform: translate(-60px,-40px);
+                transform: translate(-60px,-40px);
+    }
+}
+
+#pulse1, #pulse2 {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+}
+
+#pulse1.animated, #pulse2.animated {
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        opacity: 0;
+    }
+    
+    50% {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+    }
+    
+    70% {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        opacity: 0;
+    }
+    
+    50% {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+    }
+    
+    70% {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        opacity: 0;
+    }
 }
 /*complete page*/
 #complete-page {
@@ -512,6 +873,32 @@ tr:nth-child(even) td {
             animation-iteration-count: 1;
     -webkit-transform-origin: center;
             transform-origin: center;
+}
+
+@media only screen and (max-width: 600px) {
+/*
+    .modal {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        margin-top: 20px;
+    }
+*/
+    
+    #intro-page h1 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-height: 470px) {
+    .modal {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #intro-page h1 {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-height: 775px) {

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>John's eating habits</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* PRELOADER CSS */
+
+        /* Paste this css to your style sheet file or under head tag */
+
+        /* This only works with JavaScript, 
+        if it's not present, don't show loader */
+
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(img/Preloader_3.gif) center no-repeat #fff;
+        }
+
+    </style>
+
+    <!-- FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- CORE STYLE -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!--
+    <header>
+        <h1>John's eating habits</h1>
+    </header>
+-->
+
+    <!--PAGE-INTRO-->
+    <div class="page page-intro" data-page="intro">
+        <div class="intro-bg"></div>
+        <div class="container">
+            <img class="page-intro-img" src="img/john-2.png">
+            <img class="page-intro-img-mobile" src="img/john-mobile-2.png">
+            <div class="intro-info">
+                <h1><i class="fas fa-info-circle"></i> John's eating habits</h1>
+                <p>John is a new client and has asked you for guidance with his food intake. He wants to ensure he has enough energy and health to keep up with his grandchildren, and has asked you to make sure he’s eating the 'right' foods to reach this goal. You asked him to record what a typical day's food intake is like for him.</p>
+
+                <div class="button button-next button-green button-intro" data-goto="menu">View John's food diary</div>
+            </div>
+        </div>
+    </div>
+
+    <!--MENU-->
+    <div class="page page-menu">
+        <div class="complete-tick"><i class="far fa-check-circle"></i></div>
+
+        <div class="page-header menu-header">
+            <h2>John's eating habits</h2>
+            <div class="button button-help"><i class="far fa-question-circle"></i></div>
+            <div class="instruction">
+                <div class="instruction-container">
+                    <p>Review John’s typical daily food plan. Have a go at recommending a plan that will improve his nutrition.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="scroll-container">
+            <div class="menuItem menuItem-breakfast">
+                <div class="menuItem-container">
+                    <div class="menuItem-img"></div>
+                    <div class="menuItem-info">
+                        <p><strong>Breakfast</strong></p>
+                        <ul class="list-breakfast">
+                            <li>1 cup of coffee (instant coffee, whole milk, and 2 tsp white sugar)</li>
+                            <li>Porridge made with 1 sachet of fruit quick oats, whole milk and 2 tsp brown sugar</li>
+                        </ul>
+                    </div>
+                    <div class="button button-view button-green button-menu button-breakfast" data-goto="breakfast">Change </div>
+                    <i class="far fa-check-circle tick tick-breakfast"></i>
+                    <div class="tooltip tooltip-breakfast">
+                        Info <i class="fas fa-info-circle"></i>
+                        <span>This is the ideal breakfast alternative, as sugar has been removed from his coffee, porridge is made with wholegrain oats, and nutrient-rich fruit (blueberries) has been added as an alternative to sugar.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuItem menuItem-morning-snack correct">
+                <div class="menuItem-container">
+                    <div class="menuItem-img"></div>
+                    <div class="menuItem-info">
+                        <p><strong>Mid-morning snack</strong></p>
+                        <ul>
+                            <li>1 cup of coffee (instant coffee, whole milk, and 2 tsp white sugar)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuItem menuItem-lunch">
+                <div class="menuItem-container">
+                    <div class="menuItem-img"></div>
+                    <div class="menuItem-info">
+                        <p><strong>Lunch</strong></p>
+                        <ul class="list-lunch">
+                            <li>2 luncheon and cheese sandwiches (4 slices white bread, ham and chicken luncheon, 2 slices of tasty cheese)</li>
+                            <li>1 medium banana</li>
+                        </ul>
+                    </div>
+                    <div class="button button-view button-green button-menu button-lunch" data-goto="lunch">Change </div>
+                    <i class="far fa-check-circle tick tick-lunch"></i>
+                    <div class="tooltip tooltip-lunch">
+                        Info <i class="fas fa-info-circle"></i>
+                        <span>This is the ideal lunch alternative, as a wrap has a lower carbohydrate content and higher fibre. The avocado provides healthy fat (monounsaturated) and ham off the bone has fewer preservatives. A mandarin has lower sugar content than a banana, so this is a great alternative.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuItem menuItem-afternoon-snack correct">
+                <div class="menuItem-container">
+                    <div class="menuItem-img"></div>
+                    <div class="menuItem-info">
+                        <p><strong>Afternoon snack</strong></p>
+                        <ul>
+                            <li>1 cup of coffee (instant coffee, whole milk, and 2 tsp white sugar)</li>
+                            <li>Almonds (½ cup)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuItem menuItem-dinner correct">
+                <div class="menuItem-container">
+                    <div class="menuItem-img"></div>
+                    <div class="menuItem-info">
+                        <p><strong>Dinner</strong></p>
+                        <ul>
+                            <li>Grilled pork (2 chops)</li>
+                            <li>1 cup mashed potatoes with butter and whole milk</li>
+                            <li>1 cup frozen green beans boiled</li>
+                            <li>1 chopped carrot boiled </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuItem menuItem-dessert">
+                <div class="menuItem-container">
+                    <div class="menuItem-img"></div>
+                    <div class="menuItem-info">
+                        <p><strong>Dessert</strong></p>
+                        <ul class="list-dessert">
+                            <li>1 slice of apple and rhubarb crumble</li>
+                            <li>Boysenberry ice cream (2 large scoops)</li>
+                        </ul>
+                    </div>
+                    <div class="button button-view button-green button-menu button-dessert" data-goto="dessert">Change </div>
+                    <i class="far fa-check-circle tick tick-dessert"></i>
+                    <div class="tooltip tooltip-dessert">
+                        Info <i class="fas fa-info-circle"></i>
+                        <span>This is the Ideal dessert alternative as Greek yoghurt has higher protein and lower sugar content and kiwifruit is high in fibre and antioxidants.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuItem menuItem-supper">
+                <div class="menuItem-container">
+                    <div class="menuItem-img"></div>
+                    <div class="menuItem-info">
+                        <p><strong>Supper</strong></p>
+                        <ul class="list-supper">
+                            <li>1 cup of black tea with whole milk and 2 tsp white sugar</li>
+                            <li>3 x chocolate chip biscuits (from packet)</li>
+                        </ul>
+                    </div>
+                    <div class="button button-view button-green button-menu button-supper" data-goto="supper">Change </div>
+                    <i class="far fa-check-circle tick tick-supper"></i>
+                    <div class="tooltip tooltip-supper">
+                        Info <i class="fas fa-info-circle"></i>
+                        <span>This is the ideal supper alternative, as green tea has no energy value and dark chocolate provides antioxidant benefits with lower sugar.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--PAGES-->
+
+    <!--Breakfast page -->
+    <div class="page page-breakfast">
+        <div class="page-header">
+            <div class="button button-back"><i class="fas fa-arrow-left"></i><span> Back</span></div>
+            <h2>Breakfast</h2>
+            <div class="button button-help"><i class="far fa-question-circle"></i></div>
+        </div>
+        <section class="currentSection">
+            <div class="currentSection-img"></div>
+            <div class="currentSection-info">
+                <p><strong>John's current breakfast is:</strong></p>
+                <ul>
+                    <li>1 cup of coffee (instant coffee, whole milk, and 2 tsp white sugar)</li>
+                    <li>Porridge made with 1 sachet of fruit quick oats, whole milk and 2 tsp brown sugar</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="optionsSection">
+            <div class="option">
+                <div class="option-1 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-2 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-3 option-img"></div>
+                <div></div>
+            </div>
+
+            <div class="option-info">
+                <div></div>
+                <div>
+                    <p class="question"><i class="far fa-question-circle"></i> <strong>What would be a better option for John?</strong></p>
+                    <div class="option-info-container">
+                        <div class="button button-slider button-left button-white disabled" data-translate="100" data-slide="-1"><i class="fas fa-arrow-left"></i></div>
+
+                        <div class="optionText-container">
+                            <div class="optionText optionText-breakfast1 current" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 1:</h3>
+                                    <ul>
+                                        <li>1 cup of coffee (instant coffee, whole milk, and 2 tsp white sugar)</li>
+                                        <li>Bowl of cornflakes, whole milk, 2 tsp sugar and canned peaches</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal breakfast alternative, as cornflakes are highly processed (low nutrient value) and sugar has been added.</p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-breakfast2" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 2:</h3>
+                                    <ul>
+                                        <li>1 cup of tea with whole milk and 2 tsp white sugar</li>
+                                        <li>2 pieces of toast (white bread) with butter, jam and honey</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal breakfast alternative, as white bread is highly processed (low nutrient value) and both jam and honey are high in sugar.</p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-breakfast3" data-answer="correct">
+                                <div class="optionContent">
+                                    <h3>Option 3:</h3>
+                                    <ul class="correct-breakfast">
+                                        <li>1 cup of coffee (instant coffee with whole milk)</li>
+                                        <li>Porridge made with ½ cup wholegrain oats and water, with fresh or frozen blueberries and whole milk</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Correct</h3>
+                                    <p>This is the ideal breakfast alternative, as sugar has been removed from his coffee, porridge is made with wholegrain oats, and nutrient-rich fruit (blueberries) has been added as an alternative to sugar. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button button-slider button-right button-white" data-translate="-100" data-slide="1"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                    <nav class="slider-nav">
+
+                        <div class="button button-select button-green allowed select-breakfast">Select</div>
+
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--Lunch page -->
+    <div class="page page-lunch">
+        <div class="page-header">
+            <div class="button button-back"><i class="fas fa-arrow-left"></i><span> Back</span></div>
+            <h2>Lunch</h2>
+            <div class="button button-help"><i class="far fa-question-circle"></i></div>
+        </div>
+        <section class="currentSection">
+            <div class="currentSection-img"></div>
+            <div class="currentSection-info">
+                <p><strong>John's current lunch is:</strong></p>
+                <ul>
+                    <li>2 luncheon and cheese sandwiches (white bread)</li>
+                    <li>1 medium banana</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="optionsSection">
+            <div class="option">
+                <div class="option-1 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-2 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-3 option-img"></div>
+                <div></div>
+            </div>
+
+            <div class="option-info">
+                <div></div>
+                <div>
+                    <p class="question"><i class="far fa-question-circle"></i> <strong>What would be a better option for John?</strong></p>
+                    <div class="option-info-container">
+                        <div class="button button-slider button-left button-white disabled" data-translate="100" data-slide="-1"><i class="fas fa-arrow-left"></i></div>
+
+                        <div class="optionText-container">
+                            <div class="optionText optionText-lunch1 current" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 1:</h3>
+                                    <ul>
+                                        <li>1 steak and cheese pie and 1 chocolate muffin from bakery</li>
+                                        <li>1 apple</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal lunch alternative, as a pie has a high fat and energy content with low fibre. The chocolate muffin also has a high fat and sugar content with low fibre.</p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-lunch2" data-answer="correct">
+                                <div class="optionContent">
+                                    <h3>Option 2:</h3>
+                                    <ul class="correct-lunch">
+                                        <li>1 ham, cheese, avocado, spinach and tomato wrap (1 large mixed grain wrap, with ham off the bone and Edam cheese)</li>
+                                        <li>1 mandarin</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Correct</h3>
+                                    <p>This is the ideal lunch alternative, as a wrap has a lower carbohydrate content and higher fibre. The avocado provides healthy fat (monounsaturated) and ham off the bone has fewer preservatives. A mandarin has lower sugar content than a banana, so this is a great alternative. </p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-lunch3" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 3:</h3>
+                                    <ul>
+                                        <li>2 streaky bacon, lettuce, cheese and mayonnaise sandwiches (white bread)</li>
+                                        <li>1 banana</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal lunch, as streaky bacon and mayonnaise have high fat contents. Including a piece of fruit is great. However, bananas have a higher sugar content than other fruits like raspberries or watermelon. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button button-slider button-right button-white" data-translate="-100" data-slide="1"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                    <nav class="slider-nav">
+
+                        <div class="button button-select button-green allowed select-lunch">Select</div>
+
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--Dessert page -->
+    <div class="page page-dessert">
+        <div class="page-header">
+            <div class="button button-back"><i class="fas fa-arrow-left"></i><span> Back</span></div>
+            <h2>Dessert</h2>
+            <div class="button button-help"><i class="far fa-question-circle"></i></div>
+        </div>
+        <section class="currentSection">
+            <div class="currentSection-img"></div>
+            <div class="currentSection-info">
+                <p><strong>John's current dessert is:</strong></p>
+                <ul>
+                    <li>1 slice of apple and rhubarb crumble</li>
+                    <li>Boysenberry ice cream (2 large scoops)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="optionsSection">
+            <div class="option">
+                <div class="option-1 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-2 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-3 option-img"></div>
+                <div></div>
+            </div>
+
+            <div class="option-info">
+                <div></div>
+                <div>
+                    <p class="question"><i class="far fa-question-circle"></i> <strong>What would be a better option for John?</strong></p>
+                    <div class="option-info-container">
+                        <div class="button button-slider button-left button-white disabled" data-translate="100" data-slide="-1"><i class="fas fa-arrow-left"></i></div>
+
+                        <div class="optionText-container">
+                            <div class="optionText optionText-dessert1 current" data-answer="correct">
+                                <div class="optionContent">
+                                    <h3>Option 1:</h3>
+                                    <ul class="correct-dessert">
+                                        <li>Greek yoghurt with 1 kiwifruit</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Correct</h3>
+                                    <p>This is the Ideal dessert alternative as Greek yoghurt has higher protein and lower sugar content and kiwifruit is high in fibre and antioxidants.</p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-dessert2" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 2:</h3>
+                                    <ul>
+                                        <li>Vanilla custard (carton) with 2 scoops of hokey-pokey ice cream</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal dessert alternative, as custard and ice cream are both high in fat and sugar with low fibre. </p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-dessert3" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 3:</h3>
+                                    <ul>
+                                        <li>1 slice of chocolate cake with Greek yoghurt</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal dessert alternative as chocolate cake is high in fat and sugar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button button-slider button-right button-white" data-translate="-100" data-slide="1"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                    <nav class="slider-nav">
+
+                        <div class="button button-select button-green allowed select-dessert">Select</div>
+
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--Supper page -->
+    <div class="page page-supper">
+        <div class="page-header">
+            <div class="button button-back"><i class="fas fa-arrow-left"></i><span> Back</span></div>
+            <h2>Supper</h2>
+            <div class="button button-help"><i class="far fa-question-circle"></i></div>
+        </div>
+        <section class="currentSection">
+            <div class="currentSection-img"></div>
+            <div class="currentSection-info">
+                <p><strong>John's current supper is:</strong></p>
+                <ul>
+                    <li>1 cup of black tea with whole milk and 2 tsp white sugar</li>
+                    <li>3 x chocolate chip biscuits (from packet)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="optionsSection">
+            <div class="option">
+                <div class="option-1 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-2 option-img"></div>
+                <div></div>
+            </div>
+            <div class="option">
+                <div class="option-3 option-img"></div>
+                <div></div>
+            </div>
+
+            <div class="option-info">
+                <div></div>
+                <div>
+                    <p class="question"><i class="far fa-question-circle"></i> <strong>What would be a better option for John?</strong></p>
+                    <div class="option-info-container">
+                        <div class="button button-slider button-left button-white disabled" data-translate="100" data-slide="-1"><i class="fas fa-arrow-left"></i></div>
+
+                        <div class="optionText-container">
+                            <div class="optionText optionText-supper1 current" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 1:</h3>
+                                    <ul>
+                                        <li>1 cup of tea (whole milk and 2 tsp white sugar) with 3 pieces of milk chocolate</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal supper, as the tea has sugar added and the milk chocolate is high in fat and sugar but low in fibre.</p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-supper2" data-answer="incorrect">
+                                <div class="optionContent">
+                                    <h3>Option 2:</h3>
+                                    <ul>
+                                        <li>1 cup of Milo (whole milk and 2 tsp white sugar) with 3 Gingernut biscuits</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Incorrect</h3>
+                                    <p>This is not an ideal supper alternative, as Gingernuts and Milo are high in sugar.</p>
+                                </div>
+                            </div>
+                            <div class="optionText optionText-supper3" data-answer="correct">
+                                <div class="optionContent">
+                                    <h3>Option 3:</h3>
+                                    <ul class="correct-supper">
+                                        <li>1 cup of green tea with 1 piece of dark (80%) chocolate</li>
+                                    </ul>
+                                </div>
+                                <div class="optionFeedback">
+                                    <h3>Correct</h3>
+                                    <p>This is the ideal supper alternative, as green tea has no energy value and dark chocolate provides antioxidant benefits with lower sugar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button button-slider button-right button-white" data-translate="-100" data-slide="1"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                    <nav class="slider-nav">
+
+                        <div class="button button-select button-green allowed select-supper">Select</div>
+
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <!--JQUERY and MODERNIZR-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+
+    </script>
+
+</body>
+
+</html>

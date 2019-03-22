@@ -1,26 +1,33 @@
 var steps = ['one', 'two', 'three', 'four', 'five', 'six', 'seven'];
     var stepIndex = 0;
 
-$('header .fa').on('click', function(event) {
-    $('.tooltip, header .fa').toggleClass('active');
-    event.stopPropagation();
-});
-
-$('.tooltip').on('click', function(event) {
-    event.stopPropagation();
-});
-
-$(document).on('click', function(event) {
-    $('.tooltip, header .fa').removeClass('active');
-});
+function closeIntro() {
+           $('#intro-page').fadeOut(500); 
+            $('.example-draggable,.example-dropable,#mouse,#pulse1,#pulse2').removeClass('animated');
+        }
+        
+        $('#intro-page .btn').click(closeIntro);
+        
+        $(document).keydown(function(e) {
+            if (e.keyCode == 27) {
+                $('#intro-page .btn').click();
+            }
+        });
+        
+        
+        
+        
+        
+        $('header .fa').click(function() {
+            $('#intro-page').fadeIn(500);
+            $('.example-draggable,.example-dropable,#mouse,#pulse1,#pulse2').addClass('animated');
+        });
     
 
     $(document).ready(function () {
                 
         // initialise
-        $('#intro-page .btn').click(function() {
-           $('#intro-page').fadeOut(500); 
-        });
+        
         $("#complete-page").hide();
         var notifyIconMaxSize = 40; //Size of the Blinking icon on answer dropped.
 

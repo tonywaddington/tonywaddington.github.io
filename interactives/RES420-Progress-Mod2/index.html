@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Course progress</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* PRELOADER CSS */
+
+        /* Paste this css to your style sheet file or under head tag */
+
+        /* This only works with JavaScript, 
+        if it's not present, don't show loader */
+
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999999999999;
+            background: url(img/Preloader_3.gif) center no-repeat #fff;
+        }
+
+    </style>
+
+    <!-- FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- CORE STYLE -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header>
+        <div class="title-wrapper">
+            <p>Course progress</p>
+            <p class="title-name"></p>
+        </div>
+    </header>
+
+    <div class="wrapper">
+
+        <!--INTRO PAGE-->
+
+        <div class="page intro-page">
+            <div class="modal-container">
+                <div class="start-bg">
+                    <div class="start-img"></div>
+                </div>
+                <h2>How well did you understand the content so far? Try these questions before you move forward.</h2>
+                <button class="intro-btn">Let's start</button>
+            </div>
+        </div>
+
+
+        <!--MAP-->
+        
+<!--Set the initial status for each Level in the RES4020-progress.js file | complete, current, locked-->
+        <div class="page map-page">
+            <div class="map-bg">
+                <div class="map-container">
+                    <div class="map-level L1 first-level">
+                        <div class="level-left">
+                            <div class="link" data-module="Module 1" id="questions-L1-intro" data-level="L1"></div>
+                        </div>
+                    </div>
+                    <div class="map-level L2">
+                        <div class="level-right">
+                            <div class="link" data-module="Module 2" id="questions-L2-intro" data-level="L2"></div>
+                        </div>
+                    </div>
+                    <div class="map-level L3">
+                        <div class="level-left">
+                            <div class="link" data-module="Module 3" id="questions-L3-intro" data-level="L3"></div>
+                        </div>
+                    </div>
+                    <div class="map-level L4">
+                        <div class="level-right">
+                            <div class="link" data-module="Module 4" id="questions-L4-intro" data-level="L4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-bg"></div>
+
+        <!--LEVEL 1-->
+        <div class="modal intro-modal questions-L1-intro">
+            <div class="modal-container">
+                <div class="intro-img">
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <h1>Module 1</h1>
+                <h2>How well did you understand the content of Module 1? Try these revision questions before you move forward.</h2>
+                <button class="start-btn" data-questions="questions-L1" id="questions-L1">Let's start</button>
+            </div>
+        </div>
+
+
+        <div class="modal question-modal questions-L1">
+            <div class="feedback-bg"></div>
+            
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                    <div class="progress">1</div>
+                    <div class="progress">2</div>
+                    <div class="progress">3</div>
+                    <div class="progress">4</div>
+                    <div class="progress">5</div>
+                </div>
+            </div>
+
+            <div class="modal-container">
+
+                <div class="slide-container">
+
+                    <!-- L1 QUESTION 1 -->
+                    <div class="slide slide-1 current-slide">
+                        <div class="question">
+                            <h3>Why do you need to know about the law applying to real estate? </h3>
+                        </div>
+
+                        <ol class="answers answers-L1-1">
+                            <li data-answer="wrong"><span>a.</span>Because your customers and clients won’t necessarily have a good understanding of the law.</li>
+                            <li data-answer="wrong"><span>b.</span>Because there is a lot of law involved in the process of buying and selling property in New Zealand.</li>
+                            <li data-answer="wrong"><span>c.</span>Because it will help you avoid problems that may land you and your agency in trouble.</li>
+                            <li data-answer="correct"><span>d.</span>All of these answers are right.</li>
+                        </ol>
+                    </div>
+
+
+                    <!-- L1 QUESTION 2 -->
+                    <div class="slide slide-2">
+                        <div class="question">
+                            <h3>How to read the law - Which section of an Act usually gives key definitions?</h3>
+                        </div>
+
+                        <ol class="answers answers-L1-2">
+                            <li data-answer="correct"><span>a.</span>The Interpretation section.</li>
+                            <li data-answer="wrong"><span>b.</span>The Contents section.</li>
+                            <li data-answer="wrong"><span>c.</span>The Definitions section.</li>
+                            <li data-answer="wrong"><span>d.</span>Words will be defined throughout.</li>
+                        </ol>
+                    </div>
+
+                    <!-- L1 QUESTION 3 -->
+                    <div class="slide slide-3">
+                        <div class="question">
+                            <h3>The REA and licensing - Which of these is <strong>not</strong> part of the criteria for getting a licence as a salesperson? </h3>
+                        </div>
+
+                        <ol class="answers answers-L1-3">
+                            <li data-answer="wrong"><span>a.</span>Being a fit and proper person.</li>
+                            <li data-answer="wrong"><span>b.</span>Having the right qualifications.</li>
+                            <li data-answer="correct"><span>c.</span>Having a promise of employment from a licensed real estate agent.</li>
+                            <li data-answer="wrong"><span>d.</span>Being 18 years of age or older.</li>
+                        </ol>
+                    </div>
+
+                    <!-- L1 QUESTION 4 -->
+                    <div class="slide slide-4">
+                        <div class="question">
+                            <h3>Duties of an agency - Which of these covers ‘Duties of an agency’?</h3>
+                        </div>
+
+                        <ol class="answers answers-L1-4">
+                            <li data-answer="wrong"><span>a.</span>REA (Professional Conduct and Client Care) Rules 2012.</li>
+                            <li data-answer="wrong"><span>b.</span>Contract and Commercial Law Act 2017.</li>
+                            <li data-answer="correct"><span>c.</span>The Real Estate Agents Act 2008.</li>
+                            <li data-answer="wrong"><span>d.</span>The Fair Trading Act 1986.</li>
+                        </ol>
+                    </div>
+
+                    <!-- L1 QUESTION 5 -->
+                    <div class="slide slide-5">
+                        <div class="question">
+                            <h3>Professional conduct (the Code) Which organisation is responsible for making sure all licensees comply with the Code? </h3>
+                        </div>
+
+                        <ol class="answers answers-L1-5">
+                            <li data-answer="wrong"><span>a.</span>The Disputes Tribunal</li>
+                            <li data-answer="wrong"><span>b.</span>The Complaints Assessment Committee</li>
+                            <li data-answer="wrong"><span>c.</span>The Commerce Commission</li>
+                            <li data-answer="correct"><span>d.</span>The REA</li>
+                        </ol>
+
+                    </div>
+
+                    <!-- L1 WRAP UP -->
+                    <div class="slide slide-6">
+                        <div class="stars">
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                        </div>
+
+                        <h1>Well done!</h1>
+
+                        <div class="wrapUp">
+                            <div class="intro-img">
+                            </div>
+                            <p>How did you do with this quiz? If you got all of the answers right, congratulations! If not, you might want to spend some time re-reading the relevant parts of this module and the REA website. It’s important to have a good grounding in this legislation before you move on to Module 2 where we will go deeper into the Code.</p>
+
+                            <p><strong>Ka pai tō mahi. You’re doing great!</strong></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="submit-btn disabled" data-questions="questions-L1">Submit</button>
+                <button class="next-btn" data-questions="questions-L1">Next</button>
+
+
+                <div class="answerFeedback answerFeedback-1">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>d</strong>. All of these answers are right. There are many reasons why you need to understand the law related to your work. It’s part of what makes you a professional! You’ve made a good start on this, congratulations.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-2">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>a</strong>. The Interpretation section. You can read more about this under ‘Let’s get started’ in the Contents section.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-3">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>c</strong>. Having a promise of employment from a licensed real estate agent. If you got this question right, congratulations! If not, you might want to return to the module material under ‘The REA and licensing’. </p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-4">
+                    <h2>Well done!</h2>
+                    <p>The correct answer here is <strong>c</strong>. The Real Estate Agents Act 2008. Do you remember the duties of an agency? You can revise these by reviewing the Module 1 content and by revisiting the REA website. By the way, you will learn about <strong>all</strong> of the legislation listed in this question during this programme of study.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-5">
+                    <h2>Well done!</h2>
+                    <p>The correct answer here is <strong>d</strong>. The REA. You will remember that the REA is also responsible for the Code. This is covered in the ‘Professional conduct (the Code)’ part of this module. </p>
+                </div>
+
+                <button class="continue-btn">Continue</button>
+            </div>
+
+            <!--BACKGROUND-->
+            <div class="question-bg"></div>
+        </div>
+
+
+        <!--LEVEL 2-->
+        <div class="modal intro-modal questions-L2-intro">
+            <div class="modal-container">
+                <div class="intro-img">
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <h1>Module 2</h1>
+                <h2>You’ve nearly reached the end of Module 2. Before you move on, see how well you’ve learnt Rules 9 and 10 of the Code, the complaints process and offences and penalties.</h2>
+                <button class="start-btn" data-questions="questions-L2" id="questions-L2">Let's start</button>
+            </div>
+        </div>
+
+
+        <div class="modal question-modal questions-L2">
+            <div class="feedback-bg"></div>
+            
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                    <div class="progress">1</div>
+                    <div class="progress">2</div>
+                    <div class="progress">3</div>
+                    <div class="progress">4</div>
+                </div>
+            </div>
+
+            <div class="modal-container">
+
+                <div class="slide-container">
+
+                    <!-- L2 QUESTION 1 -->
+                    <div class="slide slide-1 current-slide">
+                        <div class="question">
+                            <h3>Rule 9 of the Code includes licensee obligations relating to:</h3>
+                        </div>
+
+                        <ol class="answers answers-L2-1">
+                            <li data-answer="wrong"><span>a.</span>Appraisal, agency and auctions</li>
+                            <li data-answer="correct"><span>b.</span>Contractual documents, conflict of interest and confidentiality</li>
+                            <li data-answer="wrong"><span>c.</span>Disclosure, discussion and documentation</li>
+                            <li data-answer="wrong"><span>d.</span>Marketing, management and miscellaneous</li>
+                        </ol>
+                    </div>
+
+
+                    <!-- L2 QUESTION 2 -->
+                    <div class="slide slide-2">
+                        <div class="question">
+                            <h3>Rule 10 of the Code deals primarily with licensee obligations relating to:</h3>
+                        </div>
+
+                        <ol class="answers answers-L2-2">
+                            <li data-answer="wrong"><span>a.</span>Record keeping, reviewing and reporting</li>
+                            <li data-answer="correct"><span>b.</span>Appraisal, agency and advertising</li>
+                            <li data-answer="wrong"><span>c.</span>Customers, contracts and communication</li>
+                            <li data-answer="wrong"><span>d.</span>Land, licensees and legislation</li>
+                        </ol>
+                    </div>
+
+                    <!-- L2 QUESTION 3 -->
+                    <div class="slide slide-3">
+                        <div class="question">
+                            <h3>When things go wrong: complaints - Which organisation can rule that a salesperson is guilty of misconduct?</h3>
+                        </div>
+
+                        <ol class="answers answers-L2-3">
+                            <li data-answer="wrong"><span>a.</span>The New Zealand Police</li>
+                            <li data-answer="wrong"><span>b.</span>The Commerce Commission</li>
+                            <li data-answer="wrong"><span>c.</span>The REA Complaints Assessment Committee (CAC)</li>
+                            <li data-answer="correct"><span>d.</span>The REA Disciplinary Tribunal</li>
+                        </ol>
+                    </div>
+
+                    <!-- L2 QUESTION 4 -->
+                    <div class="slide slide-4">
+                        <div class="question">
+                            <h3>Offences and penalties - Which of the following is true? The Real Estate Agents Act 2008 sets out a general penalty of up to:</h3>
+                        </div>
+
+                        <ol class="answers answers-L2-4">
+                            <li data-answer="wrong"><span>a.</span>$10,000 for an individual and/or $40,000 for an agency</li>
+                            <li data-answer="wrong"><span>b.</span>$15,000 for an individual and/or $50,000 for an agency</li>
+                            <li data-answer="correct"><span>c.</span>$40,000 for an individual and/or $100,000 for an agency</li>
+                            <li data-answer="wrong"><span>d.</span>$100,000 for an individual and/or $200,000 for an agency .</li>
+                        </ol>
+                    </div>
+
+                    <!-- L2 WRAP UP -->
+                    <div class="slide slide-5">
+                        <div class="stars">
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                        </div>
+
+                        <h1>Well done!</h1>
+
+                        <div class="wrapUp">
+                            <div class="intro-img">
+                            </div>
+                            <p>How did you do with this quiz? If you got all of the answers right, congratulations! If not, you might want to spend some time re-reading the relevant parts of this module. It’s important to fully understand this module before you move on to Module 3, where we will look at land ownership, transfer of ownership and titles.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="submit-btn disabled" data-questions="questions-L2">Submit</button>
+                <button class="next-btn" data-questions="questions-L2">Next</button>
+
+
+                <div class="answerFeedback answerFeedback-1">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>b</strong>. Contractual documents, conflict of interest and confidentiality. This is a very important rule of the Code, and you must understand it thoroughly.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-2">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>b</strong>. Appraisal, agency and advertising. This is a very important rule of the Code. If you don’t yet feel confident in your understanding of this Rule, have another look at Rule 10 in this module. </p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-3">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>d</strong>. Only the Disciplinary Tribunal can make this decision. The CAC can find a salesperson guilty of the lesser charge of unsatisfactory conduct. You can read about this in the ‘What happens if there is a complaint?’ part of this module.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-4">
+                    <h2>Well done!</h2>
+                    <p>The correct answer here is <strong>c</strong>. If you have studied this material carefully, and always seek the guidance of your manager when you’re not sure of something, you should not be exposed to this type of risk.</p>
+                </div>
+
+                <button class="continue-btn">Continue</button>
+            </div>
+
+            <!--BACKGROUND-->
+            <div class="question-bg"></div>
+        </div>
+
+
+        <!--LEVEL 3-->
+        <div class="modal intro-modal questions-L3-intro">
+            <div class="modal-container">
+                <div class="intro-img">
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <h1>Module 3</h1>
+                <h2>How well did you understand the content of Module 3? Try these revision questions before you move forward. </h2>
+                <button class="start-btn" data-questions="questions-L3" id="questions-L3">Let's start</button>
+            </div>
+        </div>
+
+
+        <div class="modal question-modal questions-L3">
+            <div class="feedback-bg"></div>
+            
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                    <div class="progress">1</div>
+                    <div class="progress">2</div>
+                    <div class="progress">3</div>
+                    <div class="progress">4</div>
+                    <div class="progress">5</div>
+                    <div class="progress">6</div>
+                    <div class="progress">7</div>
+                </div>
+            </div>
+
+            <div class="modal-container">
+
+                <div class="slide-container">
+
+                    <!-- L3 QUESTION 1 -->
+                    <div class="slide slide-1 current-slide">
+                        <div class="question">
+                            <h3>Which of the following correctly identify the forms of tenure of real estate under Crown administration in New Zealand? </h3>
+                        </div>
+
+                        <ol class="answers answers-L3-1">
+                            <li data-answer="wrong"><span>a.</span>Freehold, cross lease, chattels, company share, fixtures</li>
+                            <li data-answer="wrong"><span>b.</span>Freehold, cross lease, unit title, Māori land, leasehold</li>
+                            <li data-answer="wrong"><span>c.</span>Māori land, mortgage, company share, unit title, cross lease</li>
+                            <li data-answer="correct"><span>d.</span>Freehold, unit title, cross lease, leasehold, company share</li>
+                        </ol>
+                    </div>
+
+
+                    <!-- L3 QUESTION 2 -->
+                    <div class="slide slide-2">
+                        <div class="question">
+                            <h3>Which of these words best describes ‘who can use land, for how long, and under what conditions.’</h3>
+                        </div>
+
+                        <ol class="answers answers-L3-2">
+                            <li data-answer="correct"><span>a.</span>Tenure</li>
+                            <li data-answer="wrong"><span>b.</span>Ownership</li>
+                            <li data-answer="wrong"><span>c.</span>Licence</li>
+                            <li data-answer="wrong"><span>d.</span>Agreements</li>
+                        </ol>
+                    </div>
+
+                    <!-- L3 QUESTION 3 -->
+                    <div class="slide slide-3">
+                        <div class="question">
+                            <h3>The best definition of a covenant is:</h3>
+                        </div>
+
+                        <ol class="answers answers-L3-3">
+                            <li data-answer="wrong"><span>a.</span>A requirement for payment of a debt</li>
+                            <li data-answer="correct"><span>b.</span>A control over the use or non-use of a property</li>
+                            <li data-answer="wrong"><span>c.</span>A way of fencing a property</li>
+                            <li data-answer="wrong"><span>d.</span>A means of enforcing Council rules and regulations</li>
+                        </ol>
+                    </div>
+
+                    <!-- L3 QUESTION 4 -->
+                    <div class="slide slide-4">
+                        <div class="question">
+                            <h3>Which of these best describes tenancy in common? </h3>
+                        </div>
+
+                        <ol class="answers answers-L3-4">
+                            <li data-answer="correct"><span>a.</span>A form of co-ownership of property, where each owner has the same rights of possession of the land, to the extent of their share.</li>
+                            <li data-answer="wrong"><span>b.</span>An arrangement where one or more people have the right to occupy a property in exchange for market rent. </li>
+                            <li data-answer="wrong"><span>c.</span>A form of co-ownership based on a system of licences to occupy a building, with shared ownership of the land. </li>
+                            <li data-answer="wrong"><span>d.</span>An arrangements where people live together as flatmates, sharing chores and expenses.</li>
+                        </ol>
+                    </div>
+
+                    <!-- L3 QUESTION 5 -->
+                    <div class="slide slide-5">
+                        <div class="question">
+                            <h3>Is ownership of property different from possession?</h3>
+                        </div>
+
+                        <ol class="answers answers-L3-5">
+                            <li data-answer="correct"><span>a.</span>Yes - ownership is associated with a specified ‘bundle of rights’ that aren’t similarly available to someone who only has possession of the property. </li>
+                            <li data-answer="wrong"><span>b.</span>No – both the owner or the possessor can do whatever they like with the property.</li>
+                            <li data-answer="wrong"><span>c.</span>Yes – because someone in possession of the property has more rights than someone who just has ownership.</li>
+                            <li data-answer="wrong"><span>d.</span>No – there’s no difference, because you can’t have possession without first having ownership.</li>
+                        </ol>
+                    </div>
+
+                    <!-- L3 QUESTION 6 -->
+                    <div class="slide slide-6">
+                        <div class="question">
+                            <h3>The purpose of a title search is to: </h3>
+                        </div>
+
+                        <ol class="answers answers-L3-6">
+                            <li data-answer="wrong"><span>a.</span>Find a Certificate of title that has been misplaced.</li>
+                            <li data-answer="wrong"><span>b.</span>Identify fraudulent transactions that have taken place at the time of registration. </li>
+                            <li data-answer="correct"><span>c.</span>Identify the correct owner/s, and any interests registered on the Certificate of title.</li>
+                            <li data-answer="wrong"><span>d.</span>Raise awareness of any unregistered easements or covenants on the Certificate of title.</li>
+                        </ol>
+                    </div>
+
+                    <!-- L3 QUESTION 7 -->
+                    <div class="slide slide-7">
+                        <div class="question">
+                            <h3>Which organisation maintains ownership lists of Māori freehold land? </h3>
+                        </div>
+
+                        <ol class="answers answers-L3-7">
+                            <li data-answer="wrong"><span>a.</span>The Waitangi Tribunal</li>
+                            <li data-answer="wrong"><span>b.</span>LINZ</li>
+                            <li data-answer="correct"><span>c.</span>Māori Land Court</li>
+                            <li data-answer="wrong"><span>d.</span>The local city council</li>
+                        </ol>
+                    </div>
+
+                    <!-- L3 WRAP UP -->
+                    <div class="slide slide-8">
+                        <div class="stars">
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                        </div>
+
+                        <h1>Well done!</h1>
+
+                        <div class="wrapUp">
+                            <div class="intro-img">
+                            </div>
+                            <p>Are you getting all or most of the answers right? If you are, well done! If not, you might want to spend some time re-reading the relevant parts of this module. Time to move on to the last module in this course – Module 4: Consumer Law! </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="submit-btn disabled" data-questions="questions-L3">Submit</button>
+                <button class="next-btn" data-questions="questions-L3">Next</button>
+
+
+                <div class="answerFeedback answerFeedback-1">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>d</strong>. At the start of this module we discussed the five types of tenure that are under Crown administration. Remember that Māori land is administered by the Māori Land Court.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-2">
+                    <h2>Well done!</h2>
+                    <p><strong>a</strong> is the correct answer. If you know what they all mean, well done! If you’re not sure of some of these terms, it’s a good idea to go back to the module and do some further reading.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-3">
+                    <h2>Well done!</h2>
+                    <p>Answer <strong>b</strong> is correct. It’s important that you have a good understanding of covenants, as they may have a significant impact on the use of a property. If you’ve got this right, well done! If not, it’s a good idea to go back and read the part of the module that covers Covenants. </p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-4">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>a</strong>. Tenancy in common is a form of co-ownership that you are likely to encounter frequently if you work in the residential sales sector of real estate. Make sure you have a good understanding of how this legal principle works.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-5">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>a</strong> – Yes, ownership is associated with a specific ‘bundle of rights’ that aren’t similarly available to someone who only has possession of the property. </p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-6">
+                    <h2>Well done!</h2>
+                    <p>It’s important to understand this, and to familiarise yourself with the process of reading Certificates of title. If you’re unsure of anything here, have another look at this module.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-7">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>c</strong>. The Māori Land Court keeps these records. You can read about this in the ‘Māori land ownership’ part of the module.</p>
+                </div>
+
+                <button class="continue-btn">Continue</button>
+            </div>
+
+            <!--BACKGROUND-->
+            <div class="question-bg"></div>
+        </div>
+
+        <!--LEVEL 4-->
+        <div class="modal intro-modal questions-L4-intro">
+            <div class="modal-container">
+                <div class="intro-img">
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <h1>Module 4</h1>
+                <h2>How well did you understand the content of Module 4? Try these revision questions before you move forward. </h2>
+                <button class="start-btn" data-questions="questions-L4" id="questions-L4">Let's start</button>
+            </div>
+        </div>
+
+
+        <div class="modal question-modal questions-L4">
+            <div class="feedback-bg"></div>
+            
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                    <div class="progress">1</div>
+                    <div class="progress">2</div>
+                    <div class="progress">3</div>
+                    <div class="progress">4</div>
+                </div>
+            </div>
+
+            <div class="modal-container">
+
+                <div class="slide-container">
+
+                    <!-- L4 QUESTION 1 -->
+                    <div class="slide slide-1 current-slide">
+                        <div class="question">
+                            <h3>What are the two main pieces of legislation that apply to consumer law for real estate licensees? </h3>
+                        </div>
+
+                        <ol class="answers answers-L4-1">
+                            <li data-answer="wrong"><span>a.</span>The Fair Trading Act 1986 and the Property Law Act 2007</li>
+                            <li data-answer="correct"><span>b.</span>The Fair Trading Act 1986 and the Contract and Commercial Law Act 2017 </li>
+                            <li data-answer="wrong"><span>c.</span>The Real Estate Agents Act 2008 and the Contract and Commercial Law Act 2017</li>
+                            <li data-answer="wrong"><span>d.</span>The Consumer Guarantees Act 1994 and the Building Act 2004 </li>
+                        </ol>
+                    </div>
+
+
+                    <!-- L4 QUESTION 2 -->
+                    <div class="slide slide-2">
+                        <div class="question">
+                            <h3>Which of these is the best definition of a representation? </h3>
+                        </div>
+
+                        <ol class="answers answers-L4-2">
+                            <li data-answer="wrong"><span>a.</span>A marketing statement that describes a property or service.</li>
+                            <li data-answer="wrong"><span>b.</span>A verbal statement from a licensee to a prospective client or customer.</li>
+                            <li data-answer="wrong"><span>c.</span>A statement intended to impress, without necessarily being truthful.</li>
+                            <li data-answer="correct"><span>d.</span>A statement of fact, or one that claims to be factual. </li>
+                        </ol>
+                    </div>
+
+                    <!-- L4 QUESTION 3 -->
+                    <div class="slide slide-3">
+                        <div class="question">
+                            <h3>Breaches of the Fair Trading Act 1986 are dealt with by:</h3>
+                        </div>
+
+                        <ol class="answers answers-L4-3">
+                            <li data-answer="correct"><span>a.</span>The Commerce Commission</li>
+                            <li data-answer="wrong"><span>b.</span>The Complaints Assessment Committee</li>
+                            <li data-answer="wrong"><span>c.</span>The Disciplinary Tribunal</li>
+                            <li data-answer="wrong"><span>d.</span>The real estate agency concerned</li>
+                        </ol>
+                    </div>
+
+                    <!-- L4 QUESTION 4 -->
+                    <div class="slide slide-4">
+                        <div class="question">
+                            <h3>Before they can successfully claim for damages or cancellation of a real estate contract, under the Contract and Commercial Law Act, a complainant must demonstrate that: </h3>
+                        </div>
+
+                        <ol class="answers answers-L4-4">
+                            <li data-answer="wrong"><span>a.</span>They were deliberately misled about some aspect of the property by the licensee concerned.</li>
+                            <li data-answer="correct"><span>b.</span>They were induced to enter into a contract based on a misrepresentation of the facts.</li>
+                            <li data-answer="wrong"><span>c.</span>They didn’t fully understand what they were entering into when they signed the contract.</li>
+                            <li data-answer="wrong"><span>d.</span>They were not fully mentally capable to enter into the contract.</li>
+                        </ol>
+                    </div>
+
+                    <!-- L4 WRAP UP -->
+                    <div class="slide slide-5">
+                        <div class="stars">
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                            <div><i class="far fa-star"></i></div>
+                        </div>
+
+                        <h1>Well done!</h1>
+
+                        <div class="wrapUp">
+                            <div class="intro-img">
+                            </div>
+                            <p>How well have you done with these questions? Did you get them all right the first time around, or do you need to do a little revision? If there’s anything in this module that you’re not entirely sure of, do go back. This course is about building your knowledge, not just rushing to get to the finish line!</p>
+
+                            <p><strong>Congratulations on completing the first course. You’ve made great progress. The next course takes you deeper into what you need to know. You’ll learn about resource management and building law, as well as contract and agency law. Let’s go!</strong></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="submit-btn disabled" data-questions="questions-L4">Submit</button>
+                <button class="next-btn" data-questions="questions-L4">Next</button>
+
+
+                <div class="answerFeedback answerFeedback-1">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>b</strong>. Did you identify <strong>b</strong> as the correct answer? Well done! </p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-2">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>d</strong>. A statement of fact, or one that claims to be factual? Great work! If you had a different answer, think carefully about why d) is the best definition.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-3">
+                    <h2>Well done!</h2>
+                    <p>The correct answer is <strong>a</strong>. The Commerce Commission is the right answer here. Well done if you’ve got this right. If not, we recommend you have another look at this part of the module.</p>
+                </div>
+
+                <div class="answerFeedback answerFeedback-4">
+                    <h2>Well done!</h2>
+                    <p>The correct answer here is <strong>b</strong>. If you got this right, well done. It’s very important that you understand this important piece of legislation, because it will help you from making the types of mistake that have sometimes had serious consequences for other licensees.</p>
+                </div>
+
+                <button class="continue-btn">Continue</button>
+            </div>
+
+            <!--BACKGROUND-->
+            <div class="question-bg"></div>
+        </div>
+
+
+
+
+        <!--WRAPPER END-->
+    </div>
+
+    <!--FEEDBACK-->
+
+    <div class="feedback correctFeedback">
+        <i class="far fa-check-circle"></i>
+    </div>
+    <div class="feedback wrongFeedback">
+        <i class="far fa-times-circle"></i>
+    </div>
+
+
+    <!--JQUERY and MODERNIZR-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script src="js/RES420-progress.js"></script>
+
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+
+    </script>
+
+</body>
+
+</html>
