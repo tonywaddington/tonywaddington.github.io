@@ -2081,8 +2081,7 @@ a.home-project-text {
     }
 }
 
-@media only screen and (max-width: 1010px),
-(max-height:700px) {
+@media only screen and (max-width: 1010px) {
 
     .homepage .hero-text {
         padding-left: 0px;
@@ -2100,7 +2099,7 @@ a.home-project-text {
         width: 100%;
     }
 
-    .hero-text {
+    .hero-text:not(.home) {
         -ms-flex-item-align: start;
         align-self: flex-start;
         -webkit-box-pack: start;
