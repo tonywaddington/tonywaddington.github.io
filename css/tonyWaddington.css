@@ -568,7 +568,7 @@ nav a span {
 
 .about-page.open h1,
 .about-page.open .about-text,
-.about-page.open .button,
+/*.about-page.open .button,*/
 .about-page.open .about-links {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -578,7 +578,7 @@ nav a span {
 
 .about-page h1,
 .about-page .about-text,
-.about-page .button,
+/*.about-page .button,*/
 .about-page .about-links {
     -webkit-transition: 0s 0.7s;
     -o-transition: 0s 0.7s;
@@ -697,17 +697,20 @@ nav a span {
 
 .about-page .button {
     display: inline-block;
-    margin-left: 75px;
+/*    margin-left: 75px;*/
     margin-top: 30px;
     margin-bottom: 50px;
-    opacity: 0;
+/*    opacity: 0;*/
+/*
     -webkit-transform: translateY(100px);
     -ms-transform: translateY(100px);
     transform: translateY(100px);
+*/
     padding-right: 30px;
     position: relative;
 }
 
+/*
 .about-page.open .button {
     -webkit-transition: opacity 1s 1.6s, -webkit-transform 1s 1.6s;
     transition: opacity 1s 1.6s, -webkit-transform 1s 1.6s;
@@ -715,6 +718,7 @@ nav a span {
     transition: transform 1s 1.6s, opacity 1s 1.6s;
     transition: transform 1s 1.6s, opacity 1s 1.6s, -webkit-transform 1s 1.6s;
 }
+*/
 
 .about-page .button:after {
     content: "";
@@ -1327,7 +1331,9 @@ h1.animate {
 .homepage .btn-top {
     right: 50%;
     margin: 0;
-    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
 }
 
 
@@ -1386,7 +1392,7 @@ h1.animate {
 }
 
 .homepage .project-container {
-    max-width: 1500px;
+    max-width: 1200px;
     padding-bottom: 50px;
 }
 
@@ -1871,10 +1877,21 @@ footer .copyright,
 .home-project-img {
     position: relative;
     width: 100%;
-    height: 750px;
+    height: 550px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+}
+
+.home-project:hover .home-project-img {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 }
 
 .home-project {
@@ -1886,6 +1903,7 @@ footer .copyright,
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    overflow: hidden;
 }
 
 .home-project-text {
@@ -1893,13 +1911,19 @@ footer .copyright,
     padding: 10px;
     background-color: rgba(255, 255, 255, 1);
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.home-project-text .tags {
+    margin-bottom: 6px;
 }
 
 a.home-project-text {
     text-decoration: none;
 }
 
-.home-project-text h2 {
+.home-project:hover h2 {
     text-decoration: underline;
 }
 
@@ -1908,11 +1932,11 @@ a.home-project-text {
 }
 
 .home-project:hover .home-project-img .home-project-container {
-    background-color: rgba(2, 2, 2, 0.7);
+    background-color: rgba(2, 2, 2, 0.5);
 }
 
 .home-project:hover .home-project-view {
-    opacity: 1;
+/*    opacity: 1;*/
     -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px);
@@ -1928,7 +1952,7 @@ a.home-project-text {
 }
 
 .home-row .home-project-img {
-    height: 500px;
+    height: 400px;
 }
 
 .home-row .home-project:first-child {
@@ -2079,7 +2103,7 @@ a.home-project-text {
     }
 }
 
-@media only screen and (max-width: 1620px) {
+@media only screen and (max-width: 1290px) {
     .homepage .project-container {
         margin: 0;
         max-width: 100%;
@@ -2088,17 +2112,6 @@ a.home-project-text {
 
     .homepage .btn-top {
         margin-right: 22.5px;
-    }
-}
-
-@media only screen and (max-width: 1400px),
-(max-height: 900px) {
-    .home-project-img {
-        height: 500px;
-    }
-
-    .home-row .home-project-img {
-        height: 400px;
     }
 }
 
@@ -2748,6 +2761,10 @@ a.home-project-text {
 }
 
 @media only screen and (max-width: 380px) {
+    
+    .about-page-container {
+        margin: 0 20px 20px;
+    }
     .menu-text p {
         display: none;
     }
