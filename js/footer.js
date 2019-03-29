@@ -18,7 +18,7 @@ $(document).ready(function () {
             hero.classList.remove('hide');
         }
         
-        if (window.pageYOffset > projectHeight) {
+        if (window.pageYOffset > projectHeight - 100) {
             footer.classList.add('active');
         } else {
             footer.classList.remove('active');
