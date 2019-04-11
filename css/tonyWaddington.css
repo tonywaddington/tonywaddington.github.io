@@ -355,6 +355,7 @@ nav a {
     opacity: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
+    min-height: 0px;
 }
 
 nav.open a:nth-child(1) {
@@ -483,6 +484,10 @@ nav a span {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.contact.hide {
+    opacity: 0;
 }
 
 .contact:before {
@@ -1794,7 +1799,7 @@ footer .copyright,
 }
 
 .op-ar2016-footer {
-    background-image: url(../img/op-ar2016-9.jpg);
+    background-image: url(../img/OP-ar2016-9.jpg);
 }
 
 .confetti-prospectus-footer {
@@ -2101,8 +2106,12 @@ a.home-project-text {
 }
 
 @media only screen and (max-width: 1100px) {
-    .project-container:not(.home) {
+    .project-container {
         padding-right: 80px;
+    }
+    
+    .homepage .project-container {
+        width: 100%;
     }
 }
 
@@ -2455,13 +2464,13 @@ a.home-project-text {
         margin-left: 0;
     }
 
-    .project-container:not(.home) {
+    .project-container {
         padding-left: 25px;
         padding-right: 60px;
     }
 
     .project-container.home {
-        padding: 10px;
+/*        padding: 10px;*/
         padding-bottom: 50px;
     }
 
@@ -2638,13 +2647,13 @@ a.home-project-text {
         margin-bottom: 10px;
     }
 
-    .project-container:not(.home) {
+    .project-container {
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .project-container.home {
-        width: calc(100% - 40px);
+        width: 100%;
     }
 
     .home-project-img,
@@ -2658,10 +2667,6 @@ a.home-project-text {
 
     .contact {
         z-index: 3;
-    }
-
-    .homepage .contact {
-        z-index: 9;
     }
 }
 
