@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learning plan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* PRELOADER CSS */
+
+        /* Paste this css to your style sheet file or under head tag */
+
+        /* This only works with JavaScript, 
+        if it's not present, don't show loader */
+
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999999999999;
+            background: url(img/Preloader_3.gif) center no-repeat #fff;
+        }
+
+    </style>
+
+    <!-- FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Roboto:400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- CORE STYLE -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <header>
+        <p>Learning plan</p>
+        <!--        <button class="help-button"><i class="fas fa-question-circle"></i></button>-->
+    </header>
+
+
+    <div class="page">
+
+        <p><strong>Fill out the form</strong></p>
+
+        <div id="wrapper">
+
+            <div id="html_div">
+                <form action="generate_pdf.php" method="post">
+                    <input type="text" name="name" placeholder="Enter Name">
+                    <br>
+                    <input type="text" name="email" placeholder="Enter Email">
+                    <br>
+                    <input type="text" name="age" placeholder="Enter Age">
+                    <br>
+                    <input type="text" name="country" placeholder="Enter Country">
+                    <br>
+                    <input type="submit" name="submit_val" value="GENERATE PDF">
+                </form>
+
+
+                <!--html_div END-->
+            </div>
+
+            <!--WRAPPER END-->
+        </div>
+
+        <!--Page END-->
+    </div>
+
+
+    <!-- MODALS -->
+    <div class="modal modal-1">
+        <div class="modal-info">
+
+            <div class="modal-header">
+                <h1>Demonstrate a commitment to inclusion</h1>
+                <button class="close-button"><span>Close </span><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="modal-text">
+                <img src="img/img-1.svg">
+                <ul>
+                    <li>Each centre or school has the responsibility to demonstrate their commitment to inclusion.</li>
+                    <li>They can do this by having clear, open communication with students, staff, families and whānau.</li>
+                    <li>Through this communication, where there is an attitude of willingness, solutions to problems can be collectively found and potential barriers to learning reduced or removed.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal-bg"></div>
+
+    <!--JQUERY and MODERNIZR-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script src="js/CES402-modal.js"></script>
+
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+
+    </script>
+
+</body>
+
+</html>
