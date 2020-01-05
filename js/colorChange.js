@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     $('.homepage .hero-container').css('background-color', 'rgba(180,180,200,0.15)');
     
-    $('body').css('background-color', 'rgba(84,90,200,0.15)');
+    $('body').css('background-color', 'rgba(16,32,200,0.15)');
 
 
     var $win = $(window),
