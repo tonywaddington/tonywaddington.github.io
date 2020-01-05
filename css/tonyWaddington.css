@@ -756,11 +756,13 @@ nav a span {
     padding-bottom: 0;
 }
 
+/*
 .homepage .slant {
     -webkit-transition: background-color 0s linear;
     -o-transition: background-color 0s linear;
     transition: background-color 0s linear;
 }
+*/
 
 .homepage .hero-container {
     text-align: center;
@@ -777,8 +779,6 @@ nav a span {
 .hero-shadow {
     --x-shadow: 0;
     --y-shadow: 0;
-    --x: 50%;
-    --y: 50%;
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -797,13 +797,13 @@ body:hover .hero-shadow {
 
 .mouse-glow {
     position: fixed;
-    width: 1000px;
-    height: 1000px;
+    width: 900px;
+    height: 900px;
     left: 0;
     top: 0;
     background: rgb(255, 255, 255);
-    background: -o-radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
+    background: -o-radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .homepage .project {
@@ -1116,9 +1116,11 @@ h1.animate {
     -ms-transform: skewY(69deg) scaleY(2.5) translateY(20%);
     transform: skewY(69deg) scaleY(2.5) translateY(20%);
     z-index: 1;
+/*
     -webkit-transition: background-color 1s;
     -o-transition: background-color 1s;
     transition: background-color 1s;
+*/
     background-image: url(../img/bg-texture.png);
 }
 
@@ -1468,6 +1470,10 @@ h1.animate {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     /*    margin-bottom: 30px;*/
+}
+
+video::-internal-media-controls-overlay-cast-button {
+    display: none;
 }
 
 .col-container {
